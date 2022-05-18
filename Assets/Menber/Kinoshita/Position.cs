@@ -16,7 +16,7 @@ public class Position : MonoBehaviour
         {
             for(int y = -1; y < 2; y++)
             {
-                Instantiate(useList[_cardset], new Vector3( x * 9f, y * 8f, 30), Quaternion.identity);
+                Instantiate(useList[_cardset], new Vector3( x * 8f, y * 6f, 30), Quaternion.identity);
             }
         }
     }
