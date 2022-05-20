@@ -24,4 +24,3 @@ public class Aim : MonoBehaviour
 
     }
 }
-

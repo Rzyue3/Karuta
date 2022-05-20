@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shuffle : MonoBehaviour
 {
-    public List<GameObject> Shuffle;
+    public List<GameObject> Card;
     public List<GameObject> useList = new List<GameObject>();
     private GameObject randomObj;
     private int choiceNum;
@@ -18,10 +18,10 @@ public class Shuffle : MonoBehaviour
             //選んだオブジェクトをuseListに追加
             //選んだオブジェクトのリスト番号を取得
             //同じリスト番号をcardListから削除
-            randomObj = CardList[Random.Range(0, CardList.Count)];
+            randomObj = Card[Random.Range(0, Card.Count)];
             useList.Add(randomObj);
-            choiceNum = CardList.IndexOf(randomObj);
-            CardList.RemoveAt(choiceNum);
+            choiceNum = Card.IndexOf(randomObj);
+            Card.RemoveAt(choiceNum);
         }
 
 
