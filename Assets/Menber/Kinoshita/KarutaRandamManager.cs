@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KarutaRandamManager : MonoBehaviour
 {
-    public GameObject[] GameObjectPrefab;
+    public GameObject[] prefabs;
 
     //かるたの盤面1~30枚からランダムで３枚選択する
     int start = 1;
@@ -49,12 +49,17 @@ public class KarutaRandamManager : MonoBehaviour
             //indexにランダム要素数を入れる
             int index = Random.Range(2, numbers.Count);
 
-            //karutarandamにランダム要素を使って取得
-            int karutarandam = numbers[index];
-            Debug.Log(karutarandam);
+            //prefabsにランダム要素を使って取得
+            int prefabs = numbers[index];
+            Debug.Log(prefabs);
  
             numbers.RemoveAt(index);
 
+           /* switch()
+            {
+                case 1:
+            }
+           */
             //一つ目が表示されたら処理をぬける
             if(firstkaruta == 2)
             {
@@ -67,9 +72,9 @@ public class KarutaRandamManager : MonoBehaviour
             //indexにランダム要素数を入れる
             int index = Random.Range(1, numbers.Count);
 
-            //karutarandamにランダム要素を使って取得
-            int karutarandam = numbers[index];
-            Debug.Log(karutarandam);
+            //prefabsにランダム要素を使って取得
+            int prefabs = numbers[index];
+            Debug.Log(prefabs);
  
             numbers.RemoveAt(index);
 
@@ -86,8 +91,8 @@ public class KarutaRandamManager : MonoBehaviour
             int index = Random.Range(0, numbers.Count);
 
             //karutarandamにランダム要素を使って取得
-            int karutarandam = numbers[index];
-            Debug.Log(karutarandam);
+            int prefabs = numbers[index];
+            Debug.Log(prefabs);
  
             numbers.RemoveAt(index);
 
