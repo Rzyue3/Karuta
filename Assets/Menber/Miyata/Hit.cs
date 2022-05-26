@@ -4,39 +4,43 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    // “¾“_ˆ—–¢À‘•
-    // ‚¨è•t‚«–¢À‘•
+    // ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    // –¼‘O•t‚¯
-    // ƒJ[ƒh‚Ì‰ŠúHPİ’è
+    // ï¿½ï¿½ï¿½Oï¿½tï¿½ï¿½
+    // ï¿½Jï¿½[ï¿½hï¿½Ìï¿½ï¿½ï¿½HPï¿½İ’ï¿½
     public int CardHP = 150;
 
-    private bool Player1Atk, Player2Atk;
+    private bool Player1Atk, Player2Atk,Player1ct,Player1CT,Player2ct,Player2CT;
+    public bool NextK = false;
 
     private float _P1time, _P2time;
 
+    private int DestroyNum;
+
+    public int KarutaLabel;
+
+    GameObject tttst;
+    Shuffle script;
+    NextKaruta nextkaruta;
 
     void Start()
     {
-        
-        
-     
-
-
+        Player1Atk = true;
+        Player2Atk = true;
+        tttst = GameObject.Find ("GM"); 
+        script = tttst.GetComponent<Shuffle>(); 
+        nextkaruta = tttst.GetComponent<NextKaruta>();
     }
 
     void Update()
     {
 
-
-        // Rigidbody‚ÌNever Sleep‚Å”»’è‚ğ‰ñû‚µ‚Ä‚¢‚é
-        // 1ƒNƒŠƒbƒN‚Å2‰ñˆÈãE‚¤‚±‚Æ‚ª‚ ‚é‚Ì‚Å‰‹}ˆ’u‚Æ‚µ‚Ä 0.05 ‚ÌƒfƒBƒŒƒC‚ğ“ü‚ê‚Ä‚Ü‚·
-        // –¢‰üC
         if (Player1Atk == false)
         {
             _P1time += Time.deltaTime;
             {
-                if (_P1time >= 0.05f)
+                if (_P1time >= 0.1f)
                 {
                     _P1time = 0.0f;
                     Player1Atk = true;
@@ -44,47 +48,106 @@ public class Hit : MonoBehaviour
             }
         }
 
-        // Rigidbody‚ÌNever Sleep‚Å”»’è‚ğ‰ñû‚µ‚Ä‚¢‚é
-        // 1ƒNƒŠƒbƒN‚Å2‰ñˆÈãE‚¤‚±‚Æ‚ª‚ ‚é‚Ì‚Å‰‹}ˆ’u‚Æ‚µ‚Ä 0.05 ‚ÌƒfƒBƒŒƒC‚ğ“ü‚ê‚Ä‚Ü‚·
-        // –¢‰üC
         if (Player2Atk == false)
         {
             _P2time += Time.deltaTime;
-            if (_P1time >= 0.05f)
+            if (_P2time >= 0.1f)
             {
-                _P1time = 0.0f;
+                _P2time = 0.0f;
                 Player1Atk = true;
             }
         }
+        if(Player1Atk &&Input.GetMouseButtonDown(0) && Player1CT)
+        {
+            Player1ct = true;
+            Player1Atk = false;
+        }
+
+        if(Player2Atk &&Input.GetMouseButtonDown(0) && Player2CT)
+        {
+            Player2ct = true;
+            Player2Atk = false;
+        }
 
     }
-    public void OnTriggerStay2D(Collider2D Hit)
+    public void OnTriggerStay(Collider Hit)
     {
-        // ƒNƒƒXƒwƒA(Playerƒ^ƒO‚Ì•¨)‚ªd‚È‚Á‚Ä‚¢‚éƒ}ƒEƒX¶ƒNƒŠƒbƒN‚Å
-        // ƒJ[ƒh‚ÌHP‚ğ50Œ¸‚ç‚·
-        if (Input.GetMouseButtonDown(0) && Hit.CompareTag("Player") && Player1Atk)
+        if(!Player1Atk)
         {
-            Debug.Log("Hit!!");
-            CardHP -= 50;
-            // ƒJ[ƒh‚ÌHP‚ª0‚É‚È‚Á‚½‚ç‚±‚ÌƒIƒuƒWƒFƒNƒg‚ğ”j‰ó
-            if (CardHP <= 0)
-            {
-                Destroy(this.gameObject);
-                
-            }
+            Player1CT = false;
         }
-        if (Input.GetMouseButtonDown(0) && Hit.CompareTag("Player") && Player2Atk)
+        if(!Player2Atk)
         {
-            Debug.Log("Hit!!");
-            CardHP -= 50;
-            // ƒJ[ƒh‚ÌHP‚ª0‚É‚È‚Á‚½‚ç‚±‚ÌƒIƒuƒWƒFƒNƒg‚ğ”j‰ó
-            if (CardHP <= 0)
+            Player2CT = false;
+        }
+
+        if (Hit.CompareTag("Player1"))
+        {
+            Player1CT = true;
+            if(Player1ct)
             {
+                Player1ct = false;
+                Debug.Log("Hit!!");
+                CardHP -= 50;
+                // ï¿½Jï¿½[ï¿½hï¿½ï¿½HPï¿½ï¿½0ï¿½É‚È‚ï¿½ï¿½ï¿½ï¿½ç‚±ï¿½ÌƒIï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½jï¿½ï¿½
+                if (CardHP <= 0)
+                {
+                    if(NextK)
+                    {
+                        nextkaruta.NextKRe1 = true;
+                    }
+                    else
+                    {
+                        // useListã‹ã‚‰å‰Šé™¤
+                        DestroyNum = script.useList.IndexOf(this.gameObject);
+                        script.useList.RemoveAt(DestroyNum);
+                        Destroy(this.gameObject);
+
+                    }
+                }
+            }           
+        }
+        
+        if (Hit.CompareTag("Player2"))
+        {
+            Player2CT = true;
+            if(Player2ct)
+            {
+                Player2ct = false;
+                Debug.Log("Hit!!");
+                CardHP -= 50;
+                // ï¿½Jï¿½[ï¿½hï¿½ï¿½HPï¿½ï¿½0ï¿½É‚È‚ï¿½ï¿½ï¿½ï¿½ç‚±ï¿½ÌƒIï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½jï¿½ï¿½
+                if (CardHP <= 0)
+                {
+                    if(NextK)
+                    {
+                        nextkaruta.NextKRe2 = true;
+                    }
+                    // useListã‹ã‚‰å‰Šé™¤
+                    DestroyNum = script.useList.IndexOf(this.gameObject);
+                    script.useList.RemoveAt(DestroyNum);
+                    Destroy(this.gameObject);
+                }
+            }           
+        }
+    }
+
+    /*
+    ä½¿ã‚ãªã„ã‹ã‚‚ã—ã‚Œãªã„
+    void getkaruta()
+    {
+        if(NextKRe)
+        {
+            ã“ã“ã«ã‚«ãƒ«ã‚¿å–å¾—æ™‚æ‹¡å¤§å‡¦ç†
+            transform
+            Input.GetMouseButtonDown(0)
+                DestroyNum = script.useList.IndexOf(this.gameObject);
+                script.useList.RemoveAt(DestroyNum);
                 Destroy(this.gameObject);
-               
-            }
+
         }
 
     }
+    */
 
 }

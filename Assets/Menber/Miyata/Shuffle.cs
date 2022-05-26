@@ -14,10 +14,10 @@ public class Shuffle : MonoBehaviour
     {
         for (int i = 0; i < 30; i++)
         {
-            //cardList‚Ì’†‚©‚çƒ‰ƒ“ƒ_ƒ€‚Å1‚Â‚ð‘I‚Ô
-            //‘I‚ñ‚¾ƒIƒuƒWƒFƒNƒg‚ðuseList‚É’Ç‰Á
-            //‘I‚ñ‚¾ƒIƒuƒWƒFƒNƒg‚ÌƒŠƒXƒg”Ô†‚ðŽæ“¾
-            //“¯‚¶ƒŠƒXƒg”Ô†‚ðcardList‚©‚çíœ
+            //cardListï¿½Ì’ï¿½ï¿½ï¿½ï¿½çƒ‰ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½1ï¿½Â‚ï¿½Iï¿½ï¿½
+            //ï¿½Iï¿½ñ‚¾ƒIï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½useListï¿½É’Ç‰ï¿½
+            //ï¿½Iï¿½ñ‚¾ƒIï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½Ìƒï¿½ï¿½Xï¿½gï¿½Ôï¿½ï¿½ï¿½ï¿½æ“¾
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½gï¿½Ôï¿½ï¿½ï¿½cardListï¿½ï¿½ï¿½ï¿½íœ
             randomObj = Card[Random.Range(0, Card.Count)];
             useList.Add(randomObj);
             choiceNum = Card.IndexOf(randomObj);
