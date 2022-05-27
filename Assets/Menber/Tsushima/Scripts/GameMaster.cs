@@ -21,7 +21,7 @@ public class GameMaster : MonoBehaviour
     {
         textStop = false;
         TimeSet();
-
+        KarutaSystem();
     }
 
     void Update()
