@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    // ���_����������
-    // ����t��������
 
-    // ���O�t��
-    // �J�[�h�̏���HP�ݒ�
+    // 
     public int CardHP = 150;
 
     private bool Player1Atk, Player2Atk,Player1ct,Player1CT,Player2ct,Player2CT;
@@ -20,7 +17,7 @@ public class Hit : MonoBehaviour
 
     public int KarutaLabel;
 
-    GameObject tttst;
+    public GameObject gamemaster;
     Shuffle script;
     NextKaruta nextkaruta;
 
@@ -28,9 +25,9 @@ public class Hit : MonoBehaviour
     {
         Player1Atk = true;
         Player2Atk = true;
-        tttst = GameObject.Find ("GM"); 
-        script = tttst.GetComponent<Shuffle>(); 
-        nextkaruta = tttst.GetComponent<NextKaruta>();
+
+        script = gamemaster.GetComponent<Shuffle>(); 
+        nextkaruta = gamemaster.GetComponent<NextKaruta>();
     }
 
     void Update()
