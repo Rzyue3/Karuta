@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1024
     height: 768
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 2069
+  controlID: 95
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 2070
+  controlID: 96
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 2071
+  controlID: 97
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 253.5
     height: 718
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -337,7 +337,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ca600000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a83fffff4c65ffff467bffff3e83ffff2487ffff988bffff7ca8ffffeeb5ffffa6b7ffffceb8ffff84c1ffff86c1ffffbed2ffff5ad7ffff7cd7ffffd4d7ffff18e0ffffb8ecffffe6eeffff8ceffffff6efffff3ef0ffff82f0ffff5cfaffff125e00004a5e0000945e0000a65e0000d25e0000
+      m_ExpandedIDs: 18ebffff80ebffffc4ebffff08ecffff62ecffffdaecffffeaecfffffcecffffd8edffffe8efffff2ef0fffffcf0ffff38faffff36fbffffd260000096650000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -417,7 +417,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -650,9 +650,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -34.010597, y: -4.641366, z: 65.86375}
+    m_Target: {x: -13.723216, y: 254.40057, z: 73.08235}
     speed: 2
-    m_Value: {x: -34.232674, y: -5.0802317, z: 65.85386}
+    m_Value: {x: -13.723216, y: 254.40057, z: 73.08235}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -703,9 +703,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1317.4086
+    m_Target: 1635.9368
     speed: 2
-    m_Value: 1318.3973
+    m_Value: 1635.9368
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -723,7 +723,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.118121386, y: 0.08241631, z: -0.009838165, w: -0.9895243}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -771,22 +771,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Reso/IMG/RoundGet
+    - Assets/Menber/Kinoshita/Code
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Reso/IMG/RoundGet
+  - Assets/Menber/Kinoshita/Code
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/rzyue3/Desktop/Karuta
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 32}
-    m_SelectedIDs: ca600000
-    m_LastClickedID: 24778
-    m_ExpandedIDs: 00000000745a0000765a00007a5a00007e5a0000e65b00008860000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: a85d0000
+    m_LastClickedID: 23976
+    m_ExpandedIDs: 00000000905c0000965c00009a5c00009e5c0000c25c00009a5d00009e5d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -814,7 +814,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000745a000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000905c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
