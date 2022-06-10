@@ -9,7 +9,7 @@ public class Hit : MonoBehaviour
     public int CardHP = 150;
 
     private bool Player1Atk, Player2Atk,Player1ct,Player1CT,Player2ct,Player2CT;
-    public bool NextK = false;
+    public bool NextK;
 
     private float _P1time, _P2time;
 
@@ -17,22 +17,24 @@ public class Hit : MonoBehaviour
 
     public int KarutaLabel;
 
-    public GameObject gamemaster;
+    public GameObject gamemanager;
     Shuffle script;
     NextKaruta nextkaruta;
+    GameMaster gamemaster;
+    public int tett;
+    public int tetslabe;
 
     void Start()
     {
         Player1Atk = true;
         Player2Atk = true;
 
-        script = gamemaster.GetComponent<Shuffle>(); 
-        nextkaruta = gamemaster.GetComponent<NextKaruta>();
+        script = gamemanager.GetComponent<Shuffle>(); 
+        nextkaruta = gamemanager.GetComponent<NextKaruta>();
     }
 
     void Update()
     {
-
         if (Player1Atk == false)
         {
             _P1time += Time.deltaTime;
@@ -60,11 +62,13 @@ public class Hit : MonoBehaviour
             Player1Atk = false;
         }
 
+        /*
         if(Player2Atk &&Input.GetMouseButtonDown(0) && Player2CT)
         {
             Player2ct = true;
             Player2Atk = false;
         }
+        */
 
     }
     public void OnTriggerStay(Collider Hit)
@@ -89,17 +93,28 @@ public class Hit : MonoBehaviour
                 // �J�[�h��HP��0�ɂȂ����炱�̃I�u�W�F�N�g��j��
                 if (CardHP <= 0)
                 {
-                    if(NextK)
+                            gamemaster = gamemanager.GetComponent<GameMaster>();
+
+                    if(gameObject == nextkaruta.randompickObj)
                     {
-                        nextkaruta.NextKRe1 = true;
+                        Debug.Log(KarutaLabel);
+                        Debug.Log(gamemaster.textNumber);
+                        Debug.Log("NextK");
+                        nextkaruta.testNextKaruta();
+                        //nextkaruta.NextKRe1 = true;
                     }
                     else
                     {
-                        // useListから削除
-                        DestroyNum = script.useList.IndexOf(this.gameObject);
-                        script.useList.RemoveAt(DestroyNum);
-                        Destroy(this.gameObject);
+                        Debug.Log("elseHP0 P1");
+                        Debug.Log(KarutaLabel);
+                        Debug.Log(gamemaster.textNumber);
+                        Debug.Log("tett" + tett);
 
+                        // useListから削除
+                        //DestroyNum = script.useList.IndexOf(this.gameObject);
+                        //script.useList.Remove(this.gameObject);
+                        //Destroy(this.gameObject);
+                        this.gameObject.SetActive (false);
                     }
                 }
             }           
@@ -118,6 +133,7 @@ public class Hit : MonoBehaviour
                 {
                     if(NextK)
                     {
+                        Debug.Log("NextK");
                         nextkaruta.NextKRe2 = true;
                     }
                     // useListから削除
