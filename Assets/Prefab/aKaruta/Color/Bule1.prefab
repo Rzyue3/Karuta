@@ -18,7 +18,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Prefab/aKaruta/Color/Bule1.prefab
 --- !u!224 &4248416404265262132
+=======
+--- !u!224 &284363689227492879
+>>>>>>> gssh:Assets/Prefab/aKaruta/aKaruta.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,7 +70,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD:Assets/Prefab/aKaruta/Color/Bule1.prefab
   m_Texture: {fileID: 2800000, guid: 07a451771919bec4ea06344e6009069e, type: 3}
+=======
+  m_Texture: {fileID: 0}
+>>>>>>> gssh:Assets/Prefab/aKaruta/aKaruta.prefab
   m_UVRect:
     serializedVersion: 2
     x: 0

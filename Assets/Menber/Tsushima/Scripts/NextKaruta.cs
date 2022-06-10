@@ -6,36 +6,77 @@ public class NextKaruta : MonoBehaviour
 {
     // 宣言
     public GameObject Sf;   // シャッフル
-    private GameObject randomObj = null;    // ランダムに拾ってきたカルタ
+    [SerializeField]
+    public GameObject randompickObj;    // ランダムに拾ってきたカルタ
+    private GameObject testObj;
     
     Hit hit;        // 拾ってきたカルタから格納
-    Shuffle shuffle;    // シャッフルを格納
+    Hit hit2;
+    public Shuffle shuffle;    // シャッフルを格納
 
     public int P1Score,P2Score; // どちらがラウンドを取ったか、勝敗管理
     public int LabelNum;        // カルタの番号格納
-    private int DestroyNum;     // ひろったカルタをuseListから削除するための変数
+    public int DestroyNum;     // ひろったカルタをuseListから削除するための変数
 
-
+    
 
     public bool NextKRe1 = false;   // 次のラウンドに移行するためのフラグ
     public bool NextKRe2 = false;   // 次のラウンドに移行するためのフラグ 
     public bool NextGM = false;     // 次のラウンドに移行するためのフラグ
 
+    public int testint;
+    public bool testflag = false;
+    public bool tetetet = false;
+
+
+    public bool test004 = false;
     void Start()
     {
         // 変数に格納 
-        shuffle = Sf.GetComponent<Shuffle>(); 
+        shuffle = Sf.GetComponent<Shuffle>();
+        randompickObj = null;
+        DestroyNum = 0;
+        testint = 0;
+        tetetet = false;
     }
 
     void Update()
     {
+        testObj = shuffle.obj[DestroyNum];
+        if(tetetet)
+        {
+            hit2 = testObj.GetComponent<Hit>();
+            if(tetetet && DestroyNum == hit2.tetslabe)
+            {
+                Debug.Log("ok");
+            }
+            else if (tetetet && DestroyNum != hit2.tetslabe)
+            {
+                tetetet = false;
+                Debug.Log(DestroyNum);
+                Debug.Log(testint);
+                Debug.Log(hit.tetslabe);
+                Debug.Log("miss");
+            }
+
+        }
+
+        if(!randompickObj && test004)
+        {
+            Debug.Log("test");
+        }
+        if(hit.CardHP <= 0)
+        {
+            Debug.Log("参照HP0");
+        }
         // プレイヤー1が取得
         if(NextKRe1)
         {
+            Debug.Log("NextRe1");
             NextKRe1 = false;
             ++P1Score;          
-            pkKrt();            // 現在の指定カルタをリストから削除
-            randomObj = null;   // randomObjを初期化
+            testflag = true;            // 現在の指定カルタをリストから削除
+            randompickObj = null;   // randomObjを初期化
             pkKrt();            // 次のカルタ指定
             NextGM = true;      // GameMasterも初期化
 
@@ -49,8 +90,8 @@ public class NextKaruta : MonoBehaviour
         {
             NextKRe2 = false;
             ++P2Score;          
-            pkKrt();
-            randomObj = null;
+            //DestroyK();
+            randompickObj = null;
             pkKrt();
             NextGM = true;
 
@@ -60,22 +101,77 @@ public class NextKaruta : MonoBehaviour
         }
 
     }
-    void pkKrt()
+    public void pkKrt()
     {
+        randompickObj = shuffle.useList[Random.Range(0, shuffle.useList.Count)];
+        Debug.Log("get");
+        DestroyNum = shuffle.useList.IndexOf(randompickObj);
+        hit = randompickObj.GetComponent<Hit>();
         
-        if(randomObj == null)
+        Debug.Log("Hitget");
+        hit.NextK = true;
+        LabelNum = hit.KarutaLabel;
+
+/*     
+        if (testflag)
         {
-            randomObj = shuffle.useList[Random.Range(0, shuffle.useList.Count)];
-            hit = randomObj.GetComponent<Hit>();
-            hit.NextK = true;
-            LabelNum = hit.KarutaLabel;
-        }
-        else
-        {
-            DestroyNum = shuffle.useList.IndexOf(randomObj);
-            shuffle.useList.RemoveAt(DestroyNum);
+            testflag = false;
+            Debug.Log("DestroyK1");
+            //DestroyNum = shuffle.useList.IndexOf(randomObj);
+            Debug.Log("DestroyK2");
+            shuffle.useList.RemoveAt(hit.tetslabe);
             Destroy(randomObj);
 
         }
+        else
+        {
+        randomObj = shuffle.useList[Random.Range(0, shuffle.useList.Count)];
+        Debug.Log("get");
+        DestroyNum = shuffle.useList.IndexOf(randomObj);
+        hit = randomObj.GetComponent<Hit>();
+        //randomObj.AddComponent<Destroy>();
+        Debug.Log("Hitget");      
+        hit.NextK = true;
+        LabelNum = hit.KarutaLabel;
+
+        }
+ */
+
+    }
+
+    public void Deskaruta()
+    {
+        Debug.Log("DestroyK1");
+        //DestroyNum = shuffle.useList.IndexOf(randomObj);
+        Debug.Log("DestroyK2");
+        shuffle.useList.RemoveAt(hit.tetslabe);
+        Destroy(randompickObj);
+
+    }
+
+    /*
+    public void DestroyK()
+    {
+        Debug.Log("DestroyK1");
+        DestroyNum = shuffle.useList.IndexOf(randomObj);
+        Debug.Log("DestroyK2");
+        shuffle.useList.RemoveAt(DestroyNum);
+        randomObj.SetActive(false);
+
+    }
+    */
+
+    public void testNextKaruta()
+    {
+        Debug.Log("NextRe1");
+        NextKRe1 = false;
+        ++P1Score;
+        testflag = true;            // 現在の指定カルタをリストから削除
+        pkKrt();            //           
+        //DestroyK();            // 現在の指定カルタをリストから削除
+        randompickObj = null;   // randomObjを初期化
+        pkKrt();            // 次のカルタ指定
+        NextGM = true;      // GameMasterも初期化
+
     }
 }
