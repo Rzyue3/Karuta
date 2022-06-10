@@ -6,12 +6,15 @@ using UnityEngine.UI;
 public class GameMaster : MonoBehaviour
 {
     public NextKaruta nextkaruta;      // インスペクターから拾う
+    Shuffle shuffle;    // シャッフルを格納
+
+    public GameObject Sf;   // シャッフル
     public GameObject NextText = null; // Textオブジェクト
     private float _time;               // ランダムに読み上げ始める時の現在の時間
     private float _randTime;           // ランダムに読み上げ始める時間
 
     public string[] texts;//Unity上で入力するstringの配列
-    int textNumber;//何番目のtexts[]を表示させるか
+    public int textNumber;//何番目のtexts[]を表示させるか
     string displayText;//表示させるstring
     int textCharNumber;//何文字目をdisplayTextに追加するか
     int displayTextSpeed; //全体のフレームレートを落とす変数
@@ -19,7 +22,11 @@ public class GameMaster : MonoBehaviour
     
     void Start()
     {
+        shuffle = Sf.GetComponent<Shuffle>();
+
         textStop = false;
+        shuffle.shufflekaruta();
+        nextkaruta.pkKrt();
         TimeSet();
         KarutaSystem();
     }
@@ -75,7 +82,7 @@ public class GameMaster : MonoBehaviour
     // ラベル番号管理とテキスト表示開始
     void KarutaSystem()
     {
-        textCharNumber = nextkaruta.LabelNum;
+        textNumber = nextkaruta.LabelNum;
         textStop = true;
         /*
         switch(nextkaruta.LabelNum)
