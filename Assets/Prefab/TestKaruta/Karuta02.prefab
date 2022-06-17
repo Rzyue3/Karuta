@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3602427914843845871}
   m_Layer: 5
   m_Name: Karuta02
-  m_TagString: Untagged
+  m_TagString: Karuta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
