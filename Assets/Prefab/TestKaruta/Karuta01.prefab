@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8716235486074909241}
   m_Layer: 5
   m_Name: Karuta01
-  m_TagString: Untagged
+  m_TagString: Karuta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardHP: 150
-  NextK: 0
+  NextK: 1
   KarutaLabel: 0
   gamemanager: {fileID: 1968804195903584741, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
   tett: 0

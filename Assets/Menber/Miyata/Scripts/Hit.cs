@@ -17,6 +17,8 @@ public class Hit : MonoBehaviour
 
     public int KarutaLabel;
 
+    
+
     public GameObject gamemanager;
     Shuffle script;
     NextKaruta nextkaruta;
@@ -160,7 +162,14 @@ public class Hit : MonoBehaviour
 
         }
 
+
     }
     */
+    public void Damage()
+    {
+        Debug.Log("HP-");
+        Debug.Log(tetslabe);
+    }
+
 
 }
