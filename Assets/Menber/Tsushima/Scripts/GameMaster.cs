@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[DisallowMultipleComponent]
 public class GameMaster : MonoBehaviour
 {
-    public NextKaruta nextkaruta;      // インスペクターから拾う
+    public TestNextKarutaPik testnextkarutapik;
+    //public NextKaruta nextkaruta;      // インスペクターから拾う
     Shuffle shuffle;    // シャッフルを格納
 
     public GameObject Sf;   // シャッフル
-    public GameObject NextText = null; // Textオブジェクト
+    
+    //private GameObject NextText; // Textオブジェクト
+    [SerializeField]
+    private Text text;
     private float _time;               // ランダムに読み上げ始める時の現在の時間
     private float _randTime;           // ランダムに読み上げ始める時間
 
@@ -19,20 +24,38 @@ public class GameMaster : MonoBehaviour
     int textCharNumber;//何文字目をdisplayTextに追加するか
     int displayTextSpeed; //全体のフレームレートを落とす変数
     bool textStop; //テキスト表示を始めるか
+
+    public int tetetest;
+    public bool testbool;
     
+    private int P1Score;
+    private int P2Score;
+
     void Start()
     {
+        //text = NextText.GetComponent<Text>();
+        P1Score = 0;
+        P2Score = 0;
         shuffle = Sf.GetComponent<Shuffle>();
-
+        testbool = false;
         textStop = false;
         shuffle.shufflekaruta();
-        nextkaruta.pkKrt();
+//        nextkaruta.pkKrt();
+        testnextkarutapik.startC();
+        testnextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
     }
 
     void Update()
     {
+        /*
+        if(testbool)
+        {
+            testbool = false;
+            testnextkarutapik.Destroykaruta(textNumber);
+        }
+        
         // 勝敗
         if(nextkaruta.P1Score >= 3)
         {
@@ -51,7 +74,7 @@ public class GameMaster : MonoBehaviour
             TimeSet();
             KarutaSystem();
         }
-
+*/
         // テキスト表示
         if(textStop)
         {
@@ -69,8 +92,9 @@ public class GameMaster : MonoBehaviour
                     }
                 }
             }
-            NextText.GetComponent<Text>().text = displayText;
+            text.text = displayText;
         }
+
     }
 
     // 読み上げるタイミングをランダムにする
@@ -82,7 +106,9 @@ public class GameMaster : MonoBehaviour
     // ラベル番号管理とテキスト表示開始
     void KarutaSystem()
     {
-        textNumber = nextkaruta.LabelNum;
+        _time = 0.0f;
+        textNumber = testnextkarutapik.LabelNum;
+        Debug.Log("GameMaster" + textNumber);
         textStop = true;
         /*
         switch(nextkaruta.LabelNum)
@@ -98,6 +124,46 @@ public class GameMaster : MonoBehaviour
             }
         }
         */
+    }
+
+    public void testText()
+    {
+        
+
+
+
+    }
+
+    public void gameSet(int i)
+    {
+        if(i == 1)
+        {
+            P1Score++;
+            Debug.Log("Player1Score:" + P1Score);
+            if(P1Score == 3)
+            {
+                SceneManager.LoadScene("Win");
+            }
+        }
+        else
+        {
+            P2Score++;
+            if(P2Score == 3)
+            {
+                SceneManager.LoadScene("Lose");
+            }
+
+        }
+                displayText = "";
+//        NextText.GetComponent<Text>().text = displayText;
+        Debug.Log("テキスト初期化");
+        textNumber = -1;
+        textCharNumber = 0;
+        textStop = false;
+        testnextkarutapik.randompick();
+        TimeSet();
+        KarutaSystem();
+
     }
 /*    void TextTTS()
     {

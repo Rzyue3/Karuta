@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -322602428093202922}
   - component: {fileID: 3674983388915046503}
   - component: {fileID: 4057646486626364952}
+  - component: {fileID: 5041420102268190754}
   m_Layer: 5
   m_Name: Karuta28
   m_TagString: Untagged
@@ -121,9 +122,28 @@ MonoBehaviour:
   CardHP: 150
   NextK: 0
   KarutaLabel: 27
-  gamemanager: {fileID: 1968804195903584741, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
+  gamemanager: {fileID: 2222695540724273912, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
+  script: {fileID: 2222695540724273908, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
+  nextkaruta: {fileID: 2222695539609218397, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
+  testpik: {fileID: 2222695539609218369, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
+  gamemaster: {fileID: 2222695540724273915, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
   tett: 0
   tetslabe: 0
+--- !u!114 &5041420102268190754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321074930028393761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d429dcdb9e544cdab468b3fdac58790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3321074931341404149
 GameObject:
   m_ObjectHideFlags: 0

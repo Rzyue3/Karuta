@@ -20,19 +20,27 @@ public class Hit : MonoBehaviour
     
 
     public GameObject gamemanager;
+    [SerializeField]
     Shuffle script;
+    [SerializeField]
     NextKaruta nextkaruta;
+    [SerializeField]
+    TestNextKarutaPik testpik;
+    [SerializeField]
     GameMaster gamemaster;
     public int tett;
     public int tetslabe;
 
     void Start()
     {
+
         Player1Atk = true;
         Player2Atk = true;
-
         script = gamemanager.GetComponent<Shuffle>(); 
         nextkaruta = gamemanager.GetComponent<NextKaruta>();
+        gamemaster = gamemanager.GetComponent<GameMaster>();
+        testpik = gamemanager.GetComponent<TestNextKarutaPik>();
+
     }
 
     void Update()
@@ -75,6 +83,8 @@ public class Hit : MonoBehaviour
     }
     public void OnTriggerStay(Collider Hit)
     {
+
+        //Debug.Log("hitLabelNum" + nextkaruta.LabelNum);
         if(!Player1Atk)
         {
             Player1CT = false;
@@ -89,35 +99,34 @@ public class Hit : MonoBehaviour
             Player1CT = true;
             if(Player1ct)
             {
+                //gamemaster.tetetest = tetslabe;
                 Player1ct = false;
                 Debug.Log("Hit!!");
                 CardHP -= 50;
+
                 // �J�[�h��HP��0�ɂȂ����炱�̃I�u�W�F�N�g��j��
                 if (CardHP <= 0)
                 {
-                            gamemaster = gamemanager.GetComponent<GameMaster>();
-
-                    if(gameObject == nextkaruta.randompickObj)
+                    Debug.Log("NextK" +NextK);
+                    if(NextK)
                     {
-                        Debug.Log(KarutaLabel);
-                        Debug.Log(gamemaster.textNumber);
-                        Debug.Log("NextK");
-                        nextkaruta.testNextKaruta();
+                        gamemaster.gameSet(1);
+//                        gamemaster.testText();
+                        this.gameObject.SetActive(false);
+
                         //nextkaruta.NextKRe1 = true;
                     }
                     else
                     {
-                        Debug.Log("elseHP0 P1");
-                        Debug.Log(KarutaLabel);
-                        Debug.Log(gamemaster.textNumber);
-                        Debug.Log("tett" + tett);
 
                         // useListから削除
-                        //DestroyNum = script.useList.IndexOf(this.gameObject);
-                        //script.useList.Remove(this.gameObject);
+                        //DestroyNum = script.setList.IndexOf(this.gameObject);
+                        //script.setList.Remove(this.gameObject);
                         //Destroy(this.gameObject);
                         this.gameObject.SetActive (false);
+
                     }
+                    
                 }
             }           
         }
@@ -145,8 +154,9 @@ public class Hit : MonoBehaviour
                 }
             }           
         }
+        
     }
-
+        
     /*
     使わないかもしれない
     void getkaruta()
@@ -162,14 +172,17 @@ public class Hit : MonoBehaviour
 
         }
 
+*/
+        
+    
+    
 
-    }
-    */
+
+    
     public void Damage()
     {
         Debug.Log("HP-");
         Debug.Log(tetslabe);
     }
-
 
 }
