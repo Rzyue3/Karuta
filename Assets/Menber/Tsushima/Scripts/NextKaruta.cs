@@ -13,6 +13,7 @@ public class NextKaruta : MonoBehaviour
     Hit hit;        // 拾ってきたカルタから格納
     Hit hit2;
     public Shuffle shuffle;    // シャッフルを格納
+    public GameMaster gamemaster;
 
     public int P1Score,P2Score; // どちらがラウンドを取ったか、勝敗管理
     public int LabelNum;        // カルタの番号格納
@@ -28,6 +29,7 @@ public class NextKaruta : MonoBehaviour
     public bool testflag = false;
     public bool tetetet = false;
 
+    public bool wakaran = false;
 
     public bool test004 = false;
     void Start()
@@ -42,7 +44,7 @@ public class NextKaruta : MonoBehaviour
 
     void Update()
     {
-        testObj = shuffle.obj[DestroyNum];
+        Debug.Log("Testすぐ消す" + testint);
         if(tetetet)
         {
             hit2 = testObj.GetComponent<Hit>();
@@ -64,10 +66,6 @@ public class NextKaruta : MonoBehaviour
         if(!randompickObj && test004)
         {
             Debug.Log("test");
-        }
-        if(hit.CardHP <= 0)
-        {
-            Debug.Log("参照HP0");
         }
         // プレイヤー1が取得
         if(NextKRe1)
@@ -103,14 +101,29 @@ public class NextKaruta : MonoBehaviour
     }
     public void pkKrt()
     {
-        randompickObj = shuffle.useList[Random.Range(0, shuffle.useList.Count)];
-        Debug.Log("get");
-        DestroyNum = shuffle.useList.IndexOf(randompickObj);
-        hit = randompickObj.GetComponent<Hit>();
-        
-        Debug.Log("Hitget");
-        hit.NextK = true;
-        LabelNum = hit.KarutaLabel;
+        if(wakaran)
+        {
+
+            testhitnum(hit.tetslabe,DestroyNum);
+        }
+        else
+        {
+            randompickObj = shuffle.useList[Random.Range(0, shuffle.useList.Count)];
+            Debug.Log("get");
+            DestroyNum = shuffle.useList.IndexOf(randompickObj);
+            hit = randompickObj.GetComponent<Hit>();
+            
+            Debug.Log("Hitget");
+            hit.NextK = true;
+            LabelNum = hit.KarutaLabel;
+            testint = DestroyNum;
+            Debug.Log("Dstrynum" + DestroyNum);
+
+            Debug.Log("LabelNum" + LabelNum);
+
+            Debug.Log("tetslabe.nextK" + hit.tetslabe);
+
+        }
 
 /*     
         if (testflag)
@@ -160,6 +173,23 @@ public class NextKaruta : MonoBehaviour
 
     }
     */
+
+    public void testhitnum(int i,int j)
+    {
+        gamemaster = Sf.GetComponent<GameMaster>();
+
+        Debug.Log("DestroyNUm" + j);
+        Debug.Log("testhitnum" + i);
+        if(i == j)
+        {
+            Debug.Log("Clea");
+        }
+        else
+        {
+            Debug.Log("nonono");
+        }
+
+    }
 
     public void testNextKaruta()
     {

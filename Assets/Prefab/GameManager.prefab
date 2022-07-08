@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1968804195903584741
+--- !u!1 &2222695540724273912
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1968804195903584740}
-  - component: {fileID: 1968804195903584745}
-  - component: {fileID: 1968804195903584742}
-  - component: {fileID: 1968804195903584743}
+  - component: {fileID: 2222695540724273913}
+  - component: {fileID: 2222695540724273908}
+  - component: {fileID: 2222695540724273915}
+  - component: {fileID: 2222695539609218369}
+  - component: {fileID: 2222695539609218397}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -19,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1968804195903584740
+--- !u!4 &2222695540724273913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968804195903584741}
+  m_GameObject: {fileID: 2222695540724273912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 213.6555, y: 272.59998, z: 116.50987}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,13 +35,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1968804195903584745
+--- !u!114 &2222695540724273908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968804195903584741}
+  m_GameObject: {fileID: 2222695540724273912}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00f9e614dda2d9146a8dfc0cf0fad775, type: 3}
@@ -78,55 +79,25 @@ MonoBehaviour:
   - {fileID: 3321074930028393761, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
   - {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
   useList: []
-  obj:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  setList: []
   Parent1: {fileID: 0}
   Parent2: {fileID: 0}
-  Kar: {fileID: 0}
---- !u!114 &1968804195903584742
+  DestroyNum2: 0
+--- !u!114 &2222695540724273915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968804195903584741}
+  m_GameObject: {fileID: 2222695540724273912}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5859d73040234b4692877279de3d08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextkaruta: {fileID: 1968804195903584743}
-  Sf: {fileID: 1968804195903584741}
-  NextText: {fileID: 0}
+  testnextkarutapik: {fileID: 2222695539609218369}
+  Sf: {fileID: 2222695540724273912}
+  text: {fileID: 0}
   texts:
   - "\u3042\u3044\u3046\u3048\u304A"
   - "\u3044"
@@ -158,22 +129,43 @@ MonoBehaviour:
   - "\u3075"
   - "\u3078"
   - "\u307B"
-  textNumber: 0
---- !u!114 &1968804195903584743
+  textNumber: -1
+  tetetest: 4
+  testbool: 1
+--- !u!114 &2222695539609218369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968804195903584741}
+  m_GameObject: {fileID: 2222695540724273912}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82c197ce090849689b999b154d6cd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamemanager: {fileID: 2222695540724273912}
+  nextobj: {fileID: 0}
+  DestroyNum: 0
+  LabelNum: 0
+  thiskaruta: 0
+  deletetest: 0
+--- !u!114 &2222695539609218397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222695540724273912}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58fb77a72a6784dddac9ae4a73dd878c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sf: {fileID: 1968804195903584741}
+  Sf: {fileID: 2222695540724273912}
   randompickObj: {fileID: 0}
-  shuffle: {fileID: 1968804195903584745}
+  shuffle: {fileID: 2222695540724273908}
+  gamemaster: {fileID: 2222695540724273915}
   P1Score: 0
   P2Score: 0
   LabelNum: 0
@@ -184,4 +176,5 @@ MonoBehaviour:
   testint: 0
   testflag: 0
   tetetet: 0
+  wakaran: 0
   test004: 0

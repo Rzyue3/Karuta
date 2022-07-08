@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class Shuffle : MonoBehaviour
 {
     public List<GameObject> Card;
     public List<GameObject> useList = new List<GameObject>();
-    public GameObject[] obj;
+    public List<GameObject> setList = new List<GameObject>();
+    
+    
 
     [SerializeField]
     GameObject Parent1;
     [SerializeField]
     Transform Parent2;//親
 
-    public GameObject Kar;
+    public int DestroyNum2;
+
     Hit hit;
     private GameObject randomObj;   // ランダムに拾ったカルタを格納
     private int choiceNum;  // ランダムに拾ったカルタが被らないように元Listから削除
     private int _cardset;   // 配列の中身を回す
     private float x,y;  // カルタ配置座標
-    private int _count = 0;
     private GameObject testGameObj;
 
     // Start is called before the first frame update
@@ -29,7 +32,6 @@ public class Shuffle : MonoBehaviour
     }
     public void shufflekaruta()
     {
-        obj = new GameObject[30];
         for (int i = 0; i < 30; i++)
         {
             // ランダムにカルタを拾ってくる
@@ -40,16 +42,20 @@ public class Shuffle : MonoBehaviour
         }
         x = -1500f;
         y = 450f;
+        int _count = 0;
+
         // オブジェクト生成(useListの_cardsetの番号オブジェクトを指定座標に配置)
         for(int f = 0;f < 3;f++)
         {
-             // カルタを配置
+            // カルタを配置
             for(int j = 0; j < 10; j ++)
             {
+                //setList[_cardset] = Instantiate(useList[_cardset], new Vector3( x, y, 5f), Quaternion.identity,Parent2) as GameObject;
                 
-                obj [_count] = Instantiate(useList[_cardset], new Vector3( x, y, 5f), Quaternion.identity,Parent2) as GameObject;
-                
-                hit = obj[_count].GetComponent<Hit>();
+                var obj = Instantiate(useList[_cardset], new Vector3( x, y, 5f), Quaternion.identity,Parent2) as GameObject;
+                setList.Add(obj);
+
+                hit = setList[_cardset].GetComponent<Hit>();
                 hit.tetslabe += _count;
                 hit.NextK = false;
                 ++_cardset;
@@ -60,6 +66,6 @@ public class Shuffle : MonoBehaviour
             y -= 450;
         }
         
+    
     }
-
 }
