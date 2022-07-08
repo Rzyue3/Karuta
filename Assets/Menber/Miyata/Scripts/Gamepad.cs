@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gamepad : MonoBehaviour
 {
+    [SerializeField] private float Speed2;
     
     // Start is called before the first frame update
     void Start()
@@ -15,9 +16,13 @@ public class Gamepad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float SPEED = 0.1f;
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        gameObject.transform.position += new Vector3(x * SPEED,  y * SPEED,0);
+    
+        float x = Input.GetAxis("Horizontal2");
+        float y = Input.GetAxis("Vertical2");
+        gameObject.transform.position += new Vector3(x * Speed2,  -y * Speed2,0);
+        if(Input.GetButtonDown("Fire1"))
+        {
+
+        }
     }
 }
