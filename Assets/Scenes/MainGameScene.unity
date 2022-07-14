@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 11766558}
   - component: {fileID: 11766560}
   - component: {fileID: 11766559}
+  - component: {fileID: 11766561}
   m_Layer: 5
   m_Name: P1Crosshair
   m_TagString: Untagged
@@ -196,6 +197,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11766557}
   m_CullTransparentMesh: 1
+--- !u!223 &11766561
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11766557}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &17140707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3321074930028393761, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
@@ -384,6 +406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta14
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 23995c2e8b483414db255322f9dcac13, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 23995c2e8b483414db255322f9dcac13, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -521,6 +547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta18
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: aaa4079c0980d476d9014d6df8d87708, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: aaa4079c0980d476d9014d6df8d87708, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -642,6 +672,8 @@ GameObject:
   - component: {fileID: 149396313}
   - component: {fileID: 149396319}
   - component: {fileID: 149396318}
+  - component: {fileID: 149396320}
+  - component: {fileID: 149396321}
   m_Layer: 5
   m_Name: P1test
   m_TagString: Player1
@@ -756,7 +788,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149396311}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40e929bedec9c174ca35e1661ca66157, type: 3}
   m_Name: 
@@ -768,13 +800,46 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149396311}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c26ce8ffd7595624b9e83e95dc319db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _pos: {fileID: 149396311}
-  atari: {fileID: 0}
+--- !u!114 &149396320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149396311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5761fe13957f7e54ea54a44b84a5ddd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 3
+--- !u!223 &149396321
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149396311}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1001 &195005684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -913,6 +978,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
       propertyPath: m_Name
       value: Karuta22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
       propertyPath: m_Pivot.x
@@ -1141,6 +1210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta23
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 972907c29baa84209910933b6138c1b8, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 972907c29baa84209910933b6138c1b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1257,6 +1330,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: a1f8f7c0a3c7248df857d8f0a7a8fc4d, type: 3}
       propertyPath: m_Name
       value: Karuta12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: a1f8f7c0a3c7248df857d8f0a7a8fc4d, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: a1f8f7c0a3c7248df857d8f0a7a8fc4d, type: 3}
       propertyPath: m_Pivot.x
@@ -1375,6 +1452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta15
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 86f21f95e9b2c4702bc02ee74a92cbbd, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 86f21f95e9b2c4702bc02ee74a92cbbd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1491,6 +1572,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
       propertyPath: m_Name
       value: Karuta25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
       propertyPath: m_Pivot.x
@@ -1619,6 +1704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta09
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: cc12359d0ca3d4faa8fd22a5a4894fa5, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: cc12359d0ca3d4faa8fd22a5a4894fa5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1746,6 +1835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta24
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: f8f1254080af24305a1c7c9a988f3f2f, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: f8f1254080af24305a1c7c9a988f3f2f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1862,6 +1955,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
       propertyPath: m_Name
       value: Karuta11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
       propertyPath: m_Pivot.x
@@ -2225,6 +2322,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
       propertyPath: m_Name
       value: Karuta13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
       propertyPath: m_Pivot.x
@@ -2602,6 +2703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta28
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 0a313d9dbbe044c1a8d8fc8bd42e5b87, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 0a313d9dbbe044c1a8d8fc8bd42e5b87, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2718,6 +2823,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
       propertyPath: m_Name
       value: Karuta27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
       propertyPath: m_Pivot.x
@@ -2849,6 +2958,7 @@ GameObject:
   - component: {fileID: 1012080433}
   - component: {fileID: 1012080432}
   - component: {fileID: 1012080436}
+  - component: {fileID: 1012080437}
   m_Layer: 5
   m_Name: P2test
   m_TagString: Player2
@@ -2968,6 +3078,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b241c474cec1fd458b37b2e100d275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed2: 3
+--- !u!114 &1012080437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012080429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26ce8ffd7595624b9e83e95dc319db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pos: {fileID: 1012080429}
 --- !u!1001 &1032576582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2978,6 +3102,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -3698,6 +3826,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta19
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 68e855cf993fa496ca29acc31d48b2c0, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 68e855cf993fa496ca29acc31d48b2c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3952,6 +4084,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta16
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 3f771209ce136454bac4c8c1f1537ba3, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 3f771209ce136454bac4c8c1f1537ba3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4068,6 +4204,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
       propertyPath: m_Name
       value: Karuta26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
       propertyPath: m_Pivot.x
@@ -4186,6 +4326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta17
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 438bf2bacaaa54f9187ddfe94db14735, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 438bf2bacaaa54f9187ddfe94db14735, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4302,6 +4446,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 382441b0eb5664656bc1eedb041aa673, type: 3}
       propertyPath: m_Name
       value: Karuta21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 382441b0eb5664656bc1eedb041aa673, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 382441b0eb5664656bc1eedb041aa673, type: 3}
       propertyPath: m_Pivot.x
@@ -4457,6 +4605,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
       propertyPath: m_Name
       value: Karuta07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
       propertyPath: m_Pivot.x
@@ -4803,6 +4955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta06
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: eb8af65c6ed7d4146bd71f355c54abfd, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: eb8af65c6ed7d4146bd71f355c54abfd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4919,6 +5075,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
       propertyPath: m_Name
       value: Karuta08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
       propertyPath: m_Pivot.x
@@ -5245,6 +5405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta20
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 9971e9c2b7c004373b47a514c552bce9, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 9971e9c2b7c004373b47a514c552bce9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5434,6 +5598,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
       propertyPath: m_Name
       value: Karuta10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
       propertyPath: m_Pivot.x
@@ -5747,6 +5915,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
       propertyPath: m_Name
       value: Karuta29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
+      propertyPath: m_TagString
+      value: Karuta
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
       propertyPath: m_Pivot.x

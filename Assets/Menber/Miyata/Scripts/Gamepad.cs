@@ -20,9 +20,5 @@ public class Gamepad : MonoBehaviour
         float x = Input.GetAxis("Horizontal2");
         float y = Input.GetAxis("Vertical2");
         gameObject.transform.position += new Vector3(x * Speed2,  -y * Speed2,0);
-        if(Input.GetButtonDown("Fire1"))
-        {
-
-        }
     }
 }

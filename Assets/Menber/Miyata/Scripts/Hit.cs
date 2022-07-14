@@ -45,6 +45,7 @@ public class Hit : MonoBehaviour
 
     void Update()
     {
+    
         if (Player1Atk == false)
         {
             _P1time += Time.deltaTime;
@@ -66,11 +67,14 @@ public class Hit : MonoBehaviour
                 Player1Atk = true;
             }
         }
-        if(Player1Atk &&Input.GetMouseButtonDown(0) && Player1CT)
+            if(Player1Atk && Player1CT)
         {
             Player1ct = true;
             Player1Atk = false;
         }
+
+
+        
 
         /*
         if(Player2Atk &&Input.GetMouseButtonDown(0) && Player2CT)
@@ -83,7 +87,7 @@ public class Hit : MonoBehaviour
     }
     public void OnTriggerStay(Collider Hit)
     {
-
+        //Debug.Log("ColHit");
         //Debug.Log("hitLabelNum" + nextkaruta.LabelNum);
         if(!Player1Atk)
         {
