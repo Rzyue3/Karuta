@@ -20,14 +20,13 @@ public class Hit : MonoBehaviour
     
 
     public GameObject gamemanager;
-    [SerializeField]
+    
     Shuffle script;
-    [SerializeField]
     NextKaruta nextkaruta;
-    [SerializeField]
     TestNextKarutaPik testpik;
-    [SerializeField]
     GameMaster gamemaster;
+    Damagesc damagesc;
+    
     public int tett;
     public int tetslabe;
 
@@ -40,7 +39,7 @@ public class Hit : MonoBehaviour
         nextkaruta = gamemanager.GetComponent<NextKaruta>();
         gamemaster = gamemanager.GetComponent<GameMaster>();
         testpik = gamemanager.GetComponent<TestNextKarutaPik>();
-
+        damagesc = gamemanager.GetComponent<Damagesc>();
     }
 
     void Update()
@@ -103,7 +102,7 @@ public class Hit : MonoBehaviour
                 Player1ct = false;
                 Debug.Log("Hit!!");
                 CardHP -= 50;
-
+//                CardHP -= damagesc.player1damage;
                 // �J�[�h��HP��0�ɂȂ����炱�̃I�u�W�F�N�g��j��
                 if (CardHP <= 0)
                 {
@@ -139,6 +138,7 @@ public class Hit : MonoBehaviour
                 Player2ct = false;
                 Debug.Log("Hit!!");
                 CardHP -= 50;
+                CardHP -= damagesc.player2damage;
                 // �J�[�h��HP��0�ɂȂ����炱�̃I�u�W�F�N�g��j��
                 if (CardHP <= 0)
                 {

@@ -25,5 +25,17 @@ public class ReturnScene : MonoBehaviour
             }
             //else if(SceneName == "WeponsScene)
         }
+        
+        // ここにコントローラー
+        if(Input.GetMouseButtonDown(1))
+        {
+            SceneName = SceneManager.GetActiveScene().name;
+            if(SceneName == "WeponsScene")
+            {
+                SceneManager.LoadScene("Title");
+            }
+            //else if(SceneName == "WeponsScene)
+        }
+
     }
 }

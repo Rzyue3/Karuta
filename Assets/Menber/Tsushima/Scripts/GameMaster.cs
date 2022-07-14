@@ -8,10 +8,11 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour
 {
     public TestNextKarutaPik testnextkarutapik;
+    RoundStart roundstart;
     //public NextKaruta nextkaruta;      // インスペクターから拾う
     Shuffle shuffle;    // シャッフルを格納
 
-    public GameObject Sf;   // シャッフル
+    public GameObject gamemanager;   // シャッフル
     
     //private GameObject NextText; // Textオブジェクト
     [SerializeField]
@@ -24,20 +25,29 @@ public class GameMaster : MonoBehaviour
     string displayText;//表示させるstring
     int textCharNumber;//何文字目をdisplayTextに追加するか
     int displayTextSpeed; //全体のフレームレートを落とす変数
-    bool textStop; //テキスト表示を始めるか
+    public bool textStop; //テキスト表示を始めるか
+
+    [SerializeField]
+    private int textspeed;
 
     public int tetetest;
     public bool testbool;
     
+    [SerializeField]
     private int P1Score;
+    [SerializeField]
     private int P2Score;
+    [SerializeField]
+    private List<GameObject> scoreobj;
 
     void Start()
     {
         //text = NextText.GetComponent<Text>();
         P1Score = 0;
         P2Score = 0;
-        shuffle = Sf.GetComponent<Shuffle>();
+        shuffle = gamemanager.GetComponent<Shuffle>();
+        roundstart = gamemanager.GetComponent<RoundStart>();
+
         testbool = false;
         textStop = false;
         shuffle.shufflekaruta();
@@ -83,7 +93,7 @@ public class GameMaster : MonoBehaviour
             if(_randTime <= _time)
             {
                 displayTextSpeed++;
-                if (displayTextSpeed % 5 == 0)//５回に一回プログラムを実行するif文
+                if (displayTextSpeed % textspeed == 0)//textspeedに一回プログラムを実行するif文
                 {
 
                     if (textCharNumber != texts[textNumber].Length)//もしtext[textNumber]の文字列の文字が最後の文字じゃなければ
@@ -140,6 +150,12 @@ public class GameMaster : MonoBehaviour
         if(i == 1)
         {
             P1Score++;
+            switch(P1Score)
+            {
+                case 1:scoreobj[0].SetActive(true);break;
+                case 2:scoreobj[1].SetActive(true);break;
+                case 3:scoreobj[2].SetActive(true);break;
+            }
             Debug.Log("Player1Score:" + P1Score);
             if(P1Score == 3)
             {
@@ -155,8 +171,8 @@ public class GameMaster : MonoBehaviour
             }
 
         }
-                displayText = "";
-//        NextText.GetComponent<Text>().text = displayText;
+        displayText = "";
+        //NextText.GetComponent<Text>().text = displayText;
         Debug.Log("テキスト初期化");
         textNumber = -1;
         textCharNumber = 0;
@@ -164,6 +180,8 @@ public class GameMaster : MonoBehaviour
         testnextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
+        //アタッチしてない早くやれ 07091533
+        roundstart.StartCoroutine("FadeCo");
 
     }
 /*    void TextTTS()
