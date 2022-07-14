@@ -224,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7160538321709208931, guid: 72d5b109abc28da43ad51242248133b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96dd0c61a74b841ae845d78e1d02d5b7, type: 2}
     - target: {fileID: 7160538321709208956, guid: 72d5b109abc28da43ad51242248133b0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2309,7 +2313,7 @@ GameObject:
   - component: {fileID: 1003986026}
   m_Layer: 5
   m_Name: Balance
-  m_TagString: Untagged
+  m_TagString: balancetag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3124,6 +3128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7160538321709208931, guid: 72d5b109abc28da43ad51242248133b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96dd0c61a74b841ae845d78e1d02d5b7, type: 2}
     - target: {fileID: 7160538321709208956, guid: 72d5b109abc28da43ad51242248133b0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3225,6 +3233,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7160538321709208931, guid: 72d5b109abc28da43ad51242248133b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96dd0c61a74b841ae845d78e1d02d5b7, type: 2}
     - target: {fileID: 7160538321709208956, guid: 72d5b109abc28da43ad51242248133b0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4111,7 +4123,7 @@ GameObject:
   - component: {fileID: 1843208979}
   m_Layer: 5
   m_Name: Power
-  m_TagString: Untagged
+  m_TagString: powertag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5353,6 +5365,9 @@ MonoBehaviour:
   Speed: {fileID: 962844234}
   Balance: {fileID: 981786591}
   Power: {fileID: 252639368}
+  Speedobj: {fileID: 338859512}
+  Balanceobj: {fileID: 1224270981}
+  Powerobj: {fileID: 1195986438}
 --- !u!222 &3350056834153198356
 CanvasRenderer:
   m_ObjectHideFlags: 0
