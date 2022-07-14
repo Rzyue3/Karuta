@@ -31,8 +31,7 @@ public class Shot2P : MonoBehaviour
         Vector3 direction = newBall.transform.forward;
         // 弾の発射方向にnewBallのz方向(ローカル座標)を入れ、弾オブジェクトのrigidbodyに衝撃力を加える
         newBall.GetComponent<Rigidbody>().AddForce(direction * speed, ForceMode.Impulse);
-        // 出現させたボールを0.8秒後に消す
-        Destroy(newBall, 0.8f);
-        Debug.Log("発射");
+        // 出現させたボールを0.2秒後に消す
+        Destroy(newBall, 0.2f);
     }
 }

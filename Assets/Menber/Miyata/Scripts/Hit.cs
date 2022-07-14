@@ -85,6 +85,7 @@ public class Hit : MonoBehaviour
         */
 
     }
+    /*
     public void OnTriggerStay(Collider Hit)
     {
         //Debug.Log("ColHit");
@@ -134,6 +135,7 @@ public class Hit : MonoBehaviour
                 }
             }           
         }
+
         
         if (Hit.CompareTag("Player2"))
         {
@@ -160,7 +162,48 @@ public class Hit : MonoBehaviour
         }
         
     }
+    */
+    public void OnTriggerEnter(Collider Hit)
+    {
+        if(Hit.CompareTag("Player1"))
+        {
+            CardHP-=50;
+            Debug.Log("当たりました");
+            Destroy(Hit);
+            if(CardHP<=0)
+            {
+                if(NextK)
+                {
+                    gamemaster.gameSet(1);
+                    this.gameObject.SetActive(false);
+                }
+                else
+                {
+                    this.gameObject.SetActive (false);
+                }
+            }
+        }
         
+        if(Hit.CompareTag("Player2"))
+        {
+            CardHP-=50;
+            Debug.Log("当たりました");
+            Destroy(Hit);
+            if(CardHP<=0)
+            {
+                if(NextK)
+                {
+                    gamemaster.gameSet(1);
+                    this.gameObject.SetActive(false);
+                }
+                else
+                {
+                    this.gameObject.SetActive (false);
+                }
+            }
+        }
+       
+    }
     /*
     使わないかもしれない
     void getkaruta()
