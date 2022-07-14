@@ -13,7 +13,10 @@ public class GameMaster : MonoBehaviour
     Shuffle shuffle;    // シャッフルを格納
 
     public GameObject gamemanager;   // シャッフル
-    
+
+    [SerializeField]
+    AudioManager audiomanager;
+
     //private GameObject NextText; // Textオブジェクト
     [SerializeField]
     private Text text;
@@ -40,18 +43,25 @@ public class GameMaster : MonoBehaviour
     [SerializeField]
     private List<GameObject> scoreobj;
 
+    public int audiorand;
+    AudioSource audioSource;
+    public bool audiostart;
+
     void Start()
     {
         //text = NextText.GetComponent<Text>();
         P1Score = 0;
         P2Score = 0;
+        Debug.Log("オーディオ" + audiorand);
         shuffle = gamemanager.GetComponent<Shuffle>();
         roundstart = gamemanager.GetComponent<RoundStart>();
-
+        audioSource = GetComponent<AudioSource>();
+        audiorand = Random.Range(0,2);
         testbool = false;
         textStop = false;
+        audiostart = false;
         shuffle.shufflekaruta();
-//        nextkaruta.pkKrt();
+//      nextkaruta.pkKrt();
         testnextkarutapik.startC();
         testnextkarutapik.randompick();
         TimeSet();
@@ -95,12 +105,17 @@ public class GameMaster : MonoBehaviour
                 displayTextSpeed++;
                 if (displayTextSpeed % textspeed == 0)//textspeedに一回プログラムを実行するif文
                 {
-
+                    
                     if (textCharNumber != texts[textNumber].Length)//もしtext[textNumber]の文字列の文字が最後の文字じゃなければ
                     {
                         displayText = displayText + texts[textNumber][textCharNumber];//displayTextに文字を追加していく
                         textCharNumber = textCharNumber + 1;//次の文字にする
                     }
+                }
+                if(audiostart)
+                {
+                    audioplay(audiorand,textNumber);
+                    audiostart = false;
                 }
             }
             text.text = displayText;
@@ -137,12 +152,18 @@ public class GameMaster : MonoBehaviour
         */
     }
 
-    public void testText()
+    public void audioplay(int i, int j)
     {
-        
-
-
-
+        if(i == 0)
+        {
+            audioSource.clip = audiomanager.MListAudioClip[j];
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.clip = audiomanager.WListAudioClip[j];
+            audioSource.Play();
+        }
     }
 
     public void gameSet(int i)
@@ -165,6 +186,12 @@ public class GameMaster : MonoBehaviour
         else
         {
             P2Score++;
+            switch(P2Score)
+            {
+                case 1:scoreobj[3].SetActive(true);break;
+                case 2:scoreobj[4].SetActive(true);break;
+                case 3:scoreobj[5].SetActive(true);break;
+            }
             if(P2Score == 3)
             {
                 SceneManager.LoadScene("Lose");
@@ -177,6 +204,7 @@ public class GameMaster : MonoBehaviour
         textNumber = -1;
         textCharNumber = 0;
         textStop = false;
+        audiorand = Random.Range(0,2);
         testnextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
