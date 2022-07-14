@@ -7,6 +7,12 @@ TagManager:
   - Player1
   - Karuta
   - Player2
+  - speed
+  - speedtag
+  - readytag
+  - balancetag
+  - powertag
+  - Starttag
   layers:
   - Default
   - TransparentFX
