@@ -13,6 +13,9 @@ TagManager:
   - balancetag
   - powertag
   - Starttag
+  - Titletag
+  - Resulttag
+  - resulttag
   layers:
   - Default
   - TransparentFX
