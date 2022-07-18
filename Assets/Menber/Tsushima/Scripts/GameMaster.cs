@@ -27,11 +27,11 @@ public class GameMaster : MonoBehaviour
     public int textNumber;//何番目のtexts[]を表示させるか
     string displayText;//表示させるstring
     int textCharNumber;//何文字目をdisplayTextに追加するか
-    int displayTextSpeed; //全体のフレームレートを落とす変数
+    float displayTextSpeed; //全体のフレームレートを落とす変数
     public bool textStop; //テキスト表示を始めるか
 
     [SerializeField]
-    private int textspeed;
+    private float textspeed;
 
     public int tetetest;
     public bool testbool;
@@ -42,7 +42,7 @@ public class GameMaster : MonoBehaviour
     private int P2Score;
     [SerializeField]
     private List<GameObject> scoreobj;
-
+    private float initTime;
     public int audiorand;
     AudioSource audioSource;
     public bool audiostart;
@@ -52,6 +52,7 @@ public class GameMaster : MonoBehaviour
         //text = NextText.GetComponent<Text>();
         P1Score = 0;
         P2Score = 0;
+        initTime = 0.0f;
         Debug.Log("オーディオ" + audiorand);
         shuffle = gamemanager.GetComponent<Shuffle>();
         roundstart = gamemanager.GetComponent<RoundStart>();
@@ -102,10 +103,11 @@ public class GameMaster : MonoBehaviour
             _time += Time.deltaTime;
             if(_randTime <= _time)
             {
-                displayTextSpeed++;
-                if (displayTextSpeed % textspeed == 0)//textspeedに一回プログラムを実行するif文
+                displayTextSpeed += Time.deltaTime;
+                if (displayTextSpeed >= initTime)//textspeedに一回プログラムを実行するif文
                 {
-                    
+                    displayTextSpeed = 0;
+                    initTime = textspeed;
                     if (textCharNumber != texts[textNumber].Length)//もしtext[textNumber]の文字列の文字が最後の文字じゃなければ
                     {
                         displayText = displayText + texts[textNumber][textCharNumber];//displayTextに文字を追加していく
@@ -168,7 +170,7 @@ public class GameMaster : MonoBehaviour
 
     public void gameSet(int i)
     {
-        if(i == 1)
+        if(i == 0)
         {
             P1Score++;
             switch(P1Score)

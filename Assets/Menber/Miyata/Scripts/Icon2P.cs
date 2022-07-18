@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class Icon2P : MonoBehaviour
 {
    private string Speedtag="speedtag";
@@ -18,13 +19,14 @@ public class Icon2P : MonoBehaviour
     [SerializeField] GameObject Balanceobj;
     [SerializeField] GameObject Powerobj;
 
-    int selectCharaNumber;
+    [SerializeField]
+    public static int selectCharaNumber2;
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject == Speedobj)
         {
-            selectCharaNumber = 1; //スピードが押されたとき1を代入
+            selectCharaNumber2 = 1; //スピードが押されたとき1を代入
             Speed2.gameObject.SetActive(true);
             Balance2.gameObject.SetActive(false);
             Power2.gameObject.SetActive(false);
@@ -32,7 +34,7 @@ public class Icon2P : MonoBehaviour
         }
         else if(other.gameObject == Balanceobj)
         {
-            selectCharaNumber = 2; //バランスが押されたとき2を代入
+            selectCharaNumber2 = 2; //バランスが押されたとき2を代入
             Speed2.gameObject.SetActive(false);
             Balance2.gameObject.SetActive(true);
             Power2.gameObject.SetActive(false);
@@ -40,13 +42,14 @@ public class Icon2P : MonoBehaviour
         }
         else if(other.gameObject == Powerobj)
         {
-            selectCharaNumber = 3; //パワーが押されたとき3を代入
+            selectCharaNumber2 = 3; //パワーが押されたとき3を代入
             Speed2.gameObject.SetActive(false);
             Balance2.gameObject.SetActive(false);
             Power2.gameObject.SetActive(true);
         }
-        if(other.gameObject.tag==Readytag)
+        if(other.gameObject.tag==Readytag && Test.selectCharaNumber1 > 0 && selectCharaNumber2 > 0)
         {
+            //loadint.P2csv = selectCharaNumber;
             SceneManager.LoadScene("MainGameScene");
         }
     }

@@ -886,7 +886,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1226981784331341902}
-  - component: {fileID: 1226981784331341898}
   - component: {fileID: 1226981784331341901}
   - component: {fileID: 1226981784331341900}
   - component: {fileID: 1226981784331341903}
@@ -928,14 +927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pos: {fileID: 1226981784331341889}
---- !u!33 &1226981784331341898
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226981784331341889}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!135 &1226981784331341900
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1044,6 +1035,7 @@ MonoBehaviour:
   firingPoint: {fileID: 1226981785534045071}
   bullet: {fileID: 893596680339239492, guid: 0c32e3feb2dcf1749b138881f44271e5, type: 3}
   speed: 100
+  mag: {fileID: 0}
 --- !u!114 &1226981784331341942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5761fe13957f7e54ea54a44b84a5ddd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 6
 --- !u!223 &1226981784331341943
 Canvas:
   m_ObjectHideFlags: 0
@@ -1244,7 +1236,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5931603396716253090}
-  - component: {fileID: 5931603396716253119}
   - component: {fileID: 5931603396716253118}
   - component: {fileID: 5931603396716253117}
   - component: {fileID: 5931603396716253116}
@@ -1293,7 +1284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b241c474cec1fd458b37b2e100d275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed2: 3
+  Speed2: 6
 --- !u!114 &5931603396716253113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,14 +1369,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &5931603396716253119
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5931603396716253089}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &7545477029710631539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1384,7 @@ MonoBehaviour:
   firingPoint: {fileID: 5592630453453090856}
   bullet: {fileID: 893596680339239492, guid: e94ccc6d785bec146bd3d1e0864a4587, type: 3}
   speed: 300
+  mag: {fileID: 0}
 --- !u!223 &7545477029710631540
 Canvas:
   m_ObjectHideFlags: 0

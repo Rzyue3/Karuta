@@ -17,13 +17,14 @@ public class Test : MonoBehaviour
     [SerializeField] GameObject Balanceobj;
     [SerializeField] GameObject Powerobj;
 
-    int selectCharaNumber;
+    [SerializeField]
+    public static int selectCharaNumber1;
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject == Speedobj)
         {
-            selectCharaNumber = 1; //スピードが押されたとき1を代入
+            selectCharaNumber1 = 1; //スピードが押されたとき1を代入
             Speed.gameObject.SetActive(true);
             Balance.gameObject.SetActive(false);
             Power.gameObject.SetActive(false);
@@ -31,7 +32,7 @@ public class Test : MonoBehaviour
         }
         else if(other.gameObject == Balanceobj)
         {
-            selectCharaNumber = 2; //バランスが押されたとき2を代入
+            selectCharaNumber1 = 2; //バランスが押されたとき2を代入
             Speed.gameObject.SetActive(false);
             Balance.gameObject.SetActive(true);
             Power.gameObject.SetActive(false);
@@ -39,14 +40,27 @@ public class Test : MonoBehaviour
         }
         else if(other.gameObject == Powerobj)
         {
-            selectCharaNumber = 3; //パワーが押されたとき3を代入
+            selectCharaNumber1 = 3; //パワーが押されたとき3を代入
             Speed.gameObject.SetActive(false);
             Balance.gameObject.SetActive(false);
             Power.gameObject.SetActive(true);
         }
-        else if(other.gameObject.tag==Readytag)
+        else if(other.gameObject.tag==Readytag && selectCharaNumber1 > 0 && Icon2P.selectCharaNumber2 > 0)
+        {
+            //loadint.P1csv = selectCharaNumber;
+            SceneManager.LoadScene("MainGameScene");
+
+        }
+
+    }
+
+    void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene("MainGameScene");
+
         }
+
     }
 }

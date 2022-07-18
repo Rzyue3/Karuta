@@ -25,7 +25,6 @@ public class Hit : MonoBehaviour
     NextKaruta nextkaruta;
     TestNextKarutaPik testpik;
     GameMaster gamemaster;
-    Damagesc damagesc;
     
     public int tett;
     public int tetslabe;
@@ -39,7 +38,6 @@ public class Hit : MonoBehaviour
         nextkaruta = gamemanager.GetComponent<NextKaruta>();
         gamemaster = gamemanager.GetComponent<GameMaster>();
         testpik = gamemanager.GetComponent<TestNextKarutaPik>();
-        damagesc = gamemanager.GetComponent<Damagesc>();
     }
 
     void Update()
@@ -167,14 +165,15 @@ public class Hit : MonoBehaviour
     {
         if(Hit.CompareTag("Player1"))
         {
-            CardHP-=50;
+            //CardHP-=50;
+            CardHP -= Damagesc.player1damage;
             Debug.Log("当たりました");
             Destroy(Hit);
             if(CardHP<=0)
             {
                 if(NextK)
                 {
-                    gamemaster.gameSet(1);
+                    gamemaster.gameSet(0);
                     this.gameObject.SetActive(false);
                 }
                 else
@@ -186,7 +185,8 @@ public class Hit : MonoBehaviour
         
         if(Hit.CompareTag("Player2"))
         {
-            CardHP-=50;
+            //CardHP-=50;
+            CardHP -= Damagesc.player2damage;
             Debug.Log("当たりました");
             Destroy(Hit);
             if(CardHP<=0)
