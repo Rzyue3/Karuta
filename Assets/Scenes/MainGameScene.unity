@@ -7531,7 +7531,7 @@ PrefabInstance:
       objectReference: {fileID: 2222695540722677152}
     - target: {fileID: 2336657539384270273, guid: 335e73e81e4999847be748147405116a, type: 3}
       propertyPath: Speed2
-      value: 6
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 2336657539384270296, guid: 335e73e81e4999847be748147405116a, type: 3}
       propertyPath: m_Name
@@ -7739,7 +7739,7 @@ PrefabInstance:
       objectReference: {fileID: 2222695540722677152}
     - target: {fileID: 3350056832675588922, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: Speed
-      value: 6
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 3350056832675588923, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_SortingOrder
@@ -10254,7 +10254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ede5406355146299cd39ebf8083573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponStats: {fileID: 0}
   gamemanager: {fileID: 2222695540722677146}
   csvdataload: {fileID: 2222695540722677151}
 --- !u!114 &2222695540722677151
