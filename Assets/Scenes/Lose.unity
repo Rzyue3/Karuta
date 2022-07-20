@@ -505,8 +505,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 960
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -833,7 +833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -449.99994, y: 50}
+  m_AnchoredPosition: {x: -450, y: 50}
   m_SizeDelta: {x: -1100, y: -500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065658709
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1264,7 +1264,7 @@ RectTransform:
   m_GameObject: {fileID: 3660972872733952778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 13, y: 13, z: 1}
+  m_LocalScale: {x: 130, y: 130, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3660972872604719939}
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5761fe13957f7e54ea54a44b84a5ddd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.5
+  Speed: 1000
 --- !u!114 &3660972872733952831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,6 +1376,7 @@ MonoBehaviour:
   firingPoint: {fileID: 3660972871799685316}
   bullet: {fileID: 893596680339239492, guid: 0c32e3feb2dcf1749b138881f44271e5, type: 3}
   speed: 100
+  mag: {fileID: 0}
 --- !u!1 &4748870289770053658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1483,7 @@ RectTransform:
   m_GameObject: {fileID: 4748870290831401256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 13, y: 13, z: 1}
+  m_LocalScale: {x: 130, y: 130, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4748870289770053669}
@@ -1520,7 +1521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b241c474cec1fd458b37b2e100d275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed2: 0.5
+  Speed2: 1000
 --- !u!135 &4748870290831401268
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1656,3 +1657,4 @@ MonoBehaviour:
   firingPoint: {fileID: 6785563745892884129}
   bullet: {fileID: 893596680339239492, guid: e94ccc6d785bec146bd3d1e0864a4587, type: 3}
   speed: 300
+  mag: {fileID: 0}
