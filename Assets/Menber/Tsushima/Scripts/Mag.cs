@@ -7,22 +7,23 @@ public class Mag : MonoBehaviour
 {
     public int player1Mag;
     public int player2Mag;
+    public bool zeroammo1;
+    public bool zeroammo2;
+    
+    private int nowP1mag;
+    private int nowP2mag;
     private float player1ReTime;
     private float player2ReTime;
+    private float _count1;
+    private float _count2;
+
+
+    [SerializeField]
+    CsvDataLoad csvdataload;
     [SerializeField]
     Image player1cooldown;
     [SerializeField]
     Image player2cooldown;
-    float test1;
-    float test2;
-
-    int nowP1mag;
-    int nowP2mag;
-    public bool zeroammo1;
-    public bool zeroammo2;
-
-    [SerializeField]
-    CsvDataLoad csvdataload;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +42,7 @@ public class Mag : MonoBehaviour
     {
         if(nowP1mag == 0)
         {
-                        reloadnow(0);
-
+            reloadnow(0);
             Debug.Log ("経過時間(秒)" + Time.time);
         }
 
@@ -79,22 +79,26 @@ public class Mag : MonoBehaviour
     {
         if(i == 0)
         {
-            player1cooldown.fillAmount += 0.9f / (player1ReTime * 60);
+            _count1 += Time.deltaTime;
+            player1cooldown.fillAmount = _count1 / player1ReTime;
             if(player1cooldown.fillAmount >= 1)
             {
                 zeroammo1 = false;
                 nowP1mag = player1Mag;
+                _count1 = 0.0f;
                 Debug.Log ("経過時間(秒)" + Time.time);
 
             }
         }
         else
         {
-            player2cooldown.fillAmount += 0.9f / (player2ReTime * 60);
+            _count2 += Time.deltaTime;
+            player2cooldown.fillAmount = _count2 / player2ReTime;
             if(player2cooldown.fillAmount >= 1)
             {
                 zeroammo2 = false;
                 nowP2mag = player2Mag;
+                _count2 = 0.0f;
             }
 
         }
