@@ -7749,6 +7749,26 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3350056833609883840, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350056833609883840, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350056833609883840, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350056833609883840, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350056833609883840, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4442923575895881223, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
