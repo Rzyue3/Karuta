@@ -9,6 +9,9 @@ public class Aim : MonoBehaviour
 
     private Vector2 target;
 
+    [SerializeField]
+    private Explosion exp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,10 @@ public class Aim : MonoBehaviour
         mouse = Input.mousePosition;
         target = Camera.main.ScreenToWorldPoint(new Vector3(mouse.x, mouse.y, 100));
         this.transform.position = target;
+        if(Input.GetMouseButtonDown(0))
+        {
+            exp.blowoff();
+        }
 
     }
 }

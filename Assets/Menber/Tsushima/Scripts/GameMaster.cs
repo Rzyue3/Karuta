@@ -51,6 +51,8 @@ public class GameMaster : MonoBehaviour
     AudioSource audioSource;
     public bool audiostart;
 
+    public bool karutainitpos;
+
     void Start()
     {
         //text = NextText.GetComponent<Text>();
@@ -179,6 +181,7 @@ public class GameMaster : MonoBehaviour
 
     public void gameSet(int i)
     {
+        karutainitpos = true;
         if(i == 0)
         {
             P1Score++;
@@ -215,12 +218,14 @@ public class GameMaster : MonoBehaviour
         textNumber = -1;
         textCharNumber = 0;
         textStop = false;
+        karutainitpos = false;
         audiorand = Random.Range(0,2);
         testnextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
         //アタッチしてない早くやれ 07091533
         roundstart.StartCoroutine("FadeCo");
+        karutainitpos = false;
 
     }
 /*    void TextTTS()

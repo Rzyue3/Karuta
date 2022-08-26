@@ -18,12 +18,12 @@ public class Cardcrack : MonoBehaviour
 
     void Update()
     {
-        /*
+        
         if(Input.GetMouseButtonDown(1))
         {
             Damagecrack();
         }
-        */
+        
     }
 
     public void Damagecrack()

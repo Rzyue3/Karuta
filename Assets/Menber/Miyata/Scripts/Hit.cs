@@ -34,9 +34,11 @@ public class Hit : MonoBehaviour
     public int tett;
     public int tetslabe;
 
+    private Vector3 startpos;
+
     void Start()
     {
-
+        startpos = this.gameObject.transform.position;
         Player1Atk = true;
         Player2Atk = true;
         crackflag = false;
@@ -72,7 +74,10 @@ public class Hit : MonoBehaviour
             );
         }
 
-
+        if(gamemaster.karutainitpos)
+        {
+            this.gameObject.transform.position = startpos;
+        }
 
     
         if (Player1Atk == false)

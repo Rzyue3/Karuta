@@ -9,11 +9,6 @@ public class Explosion : MonoBehaviour
     [SerializeField] float m_upwards = 0;
     Vector3 m_position;
 
-    void FixedUpdate() 
-    {
-        
-    
-    }
     public void blowoff ()
     {
         Debug.Log("Explosion!");
