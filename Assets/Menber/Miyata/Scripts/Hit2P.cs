@@ -7,30 +7,31 @@ public class Hit2P : MonoBehaviour
 
     [SerializeField] private GameObject _pos;
     private float rayDistance;
-    public GameObject atari;
     Hit script;
 
     private void Start()
     {
-        rayDistance=50.0f; //ƒŒƒC‚Ì’·‚³
+        rayDistance=50.0f; //ï¿½ï¿½ï¿½Cï¿½Ì’ï¿½ï¿½ï¿½
     }
 
     void Update()
     {
         var direction = transform.forward;
 
-        if (Input.GetMouseButtonDown(1)) //‰EƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«
+        if (Input.GetButtonDown("Fire3_2")) //ï¿½Eï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½ê‚½ï¿½Æ‚ï¿½
         {
 
-            Ray ray = new Ray(_pos.transform.position, direction); //•W€‚ÌÀ•W
+            Ray ray = new Ray(_pos.transform.position, direction); //ï¿½Wï¿½ï¿½ï¿½Ìï¿½ï¿½W
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, rayDistance))
             {    
-                if (hit.collider.CompareTag("Karuta")) // ƒ^ƒO‚ğ”äŠr
+            
+                if (hit.collider.CompareTag("Karuta")) // ï¿½^ï¿½Oï¿½ï¿½ï¿½r
                 {
+                    Debug.Log("å½“ãŸã£ãŸ");
                     script = hit.collider.GetComponent<Hit>();
                     script.Damage();
-                    //Destroy(hit.collider.gameObject); // ƒIƒuƒWƒFƒNƒg‚ğ”j‰ó
+                    //Destroy(hit.collider.gameObject); // ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½jï¿½ï¿½
                 }
             }
         }

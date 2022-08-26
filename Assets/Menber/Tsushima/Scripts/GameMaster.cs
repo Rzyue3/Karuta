@@ -13,7 +13,10 @@ public class GameMaster : MonoBehaviour
     Shuffle shuffle;    // シャッフルを格納
 
     public GameObject gamemanager;   // シャッフル
-    
+
+    [SerializeField]
+    AudioManager audiomanager;
+
     //private GameObject NextText; // Textオブジェクト
     [SerializeField]
     private Text text;
@@ -24,14 +27,18 @@ public class GameMaster : MonoBehaviour
     public int textNumber;//何番目のtexts[]を表示させるか
     string displayText;//表示させるstring
     int textCharNumber;//何文字目をdisplayTextに追加するか
-    int displayTextSpeed; //全体のフレームレートを落とす変数
+    float displayTextSpeed; //全体のフレームレートを落とす変数
     public bool textStop; //テキスト表示を始めるか
 
     [SerializeField]
-    private int textspeed;
+    private float textspeed;
 
     public int tetetest;
     public bool testbool;
+
+    // カルタの破壊された数
+    [SerializeField]
+    public int DestroyCount;
     
     [SerializeField]
     private int P1Score;
@@ -39,19 +46,28 @@ public class GameMaster : MonoBehaviour
     private int P2Score;
     [SerializeField]
     private List<GameObject> scoreobj;
+    private float initTime;
+    public int audiorand;
+    AudioSource audioSource;
+    public bool audiostart;
 
     void Start()
     {
         //text = NextText.GetComponent<Text>();
         P1Score = 0;
         P2Score = 0;
+        initTime = 0.0f;
+        DestroyCount = 0;
+        Debug.Log("オーディオ" + audiorand);
         shuffle = gamemanager.GetComponent<Shuffle>();
         roundstart = gamemanager.GetComponent<RoundStart>();
-
+        audioSource = GetComponent<AudioSource>();
+        audiorand = Random.Range(0,2);
         testbool = false;
         textStop = false;
+        audiostart = false;
         shuffle.shufflekaruta();
-//        nextkaruta.pkKrt();
+//      nextkaruta.pkKrt();
         testnextkarutapik.startC();
         testnextkarutapik.randompick();
         TimeSet();
@@ -60,6 +76,10 @@ public class GameMaster : MonoBehaviour
 
     void Update()
     {
+        if(DestroyCount == 30)
+        {
+            SceneManager.LoadScene("Title");
+        }
         /*
         if(testbool)
         {
@@ -92,15 +112,21 @@ public class GameMaster : MonoBehaviour
             _time += Time.deltaTime;
             if(_randTime <= _time)
             {
-                displayTextSpeed++;
-                if (displayTextSpeed % textspeed == 0)//textspeedに一回プログラムを実行するif文
+                displayTextSpeed += Time.deltaTime;
+                if (displayTextSpeed >= initTime)//textspeedに一回プログラムを実行するif文
                 {
-
+                    displayTextSpeed = 0;
+                    initTime = textspeed;
                     if (textCharNumber != texts[textNumber].Length)//もしtext[textNumber]の文字列の文字が最後の文字じゃなければ
                     {
                         displayText = displayText + texts[textNumber][textCharNumber];//displayTextに文字を追加していく
                         textCharNumber = textCharNumber + 1;//次の文字にする
                     }
+                }
+                if(audiostart)
+                {
+                    audioplay(audiorand,textNumber);
+                    audiostart = false;
                 }
             }
             text.text = displayText;
@@ -137,17 +163,23 @@ public class GameMaster : MonoBehaviour
         */
     }
 
-    public void testText()
+    public void audioplay(int i, int j)
     {
-        
-
-
-
+        if(i == 0)
+        {
+            audioSource.clip = audiomanager.MListAudioClip[j];
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.clip = audiomanager.WListAudioClip[j];
+            audioSource.Play();
+        }
     }
 
     public void gameSet(int i)
     {
-        if(i == 1)
+        if(i == 0)
         {
             P1Score++;
             switch(P1Score)
@@ -165,6 +197,12 @@ public class GameMaster : MonoBehaviour
         else
         {
             P2Score++;
+            switch(P2Score)
+            {
+                case 1:scoreobj[3].SetActive(true);break;
+                case 2:scoreobj[4].SetActive(true);break;
+                case 3:scoreobj[5].SetActive(true);break;
+            }
             if(P2Score == 3)
             {
                 SceneManager.LoadScene("Lose");
@@ -177,6 +215,7 @@ public class GameMaster : MonoBehaviour
         textNumber = -1;
         textCharNumber = 0;
         textStop = false;
+        audiorand = Random.Range(0,2);
         testnextkarutapik.randompick();
         TimeSet();
         KarutaSystem();

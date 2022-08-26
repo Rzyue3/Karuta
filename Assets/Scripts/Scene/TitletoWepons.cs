@@ -5,13 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TitletoWepons : MonoBehaviour
 {
-void Update()
+    public void onButtonClick()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-                SceneManager.LoadScene("WeponsScene");
-        }
-        
+        SceneManager.LoadScene("WeponsScene");
     }
-    
 }

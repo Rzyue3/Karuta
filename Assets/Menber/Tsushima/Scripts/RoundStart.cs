@@ -59,6 +59,7 @@ public class RoundStart : MonoBehaviour
                 // 1フレーム待つ
                 yield return null; 
             }
+        gamemaster.audioplay(gamemaster.audiorand,43 + _count);
 
         yield return new WaitForSeconds(2);
         Debug.Log("IEnume");
@@ -80,6 +81,7 @@ public class RoundStart : MonoBehaviour
         gamemaster.textStop = true;
         P1Crosshair.SetActive(true);
         P2Crosshair.SetActive(true);
+        gamemaster.audiostart = true;
     }
 
 }

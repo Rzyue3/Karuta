@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
-
+    private string Starttag="Starttag";
 
     // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        if(Input.GetMouseButtonDown(0))
+        if(other.gameObject.tag==Starttag)
         {
-            SceneManager.LoadScene("Title");
+            SceneManager.LoadScene("WeponsScene");
         }
     }
 }

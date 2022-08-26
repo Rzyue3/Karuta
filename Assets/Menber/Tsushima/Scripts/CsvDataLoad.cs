@@ -17,6 +17,8 @@ public  class CsvDataLoad : MonoBehaviour//MonoBehaviourは継承しない
     public int[] WeaponAtk = new int[100];//武器のHP
     public int[] WeaponBullets = new int[100];//武器の装弾数
     public int[] WeaponMoveSpeed = new int[100];//武器毎の移動速度
+    public float[] WeaponReloadTime = new float[100];//武器のリロード時間
+    public float[] WeaponBulletSize = new float[100];//弾の大きさ
     //指定したアドレスに保管されているCSVファイルから情報を読み取り、weaponDataに情報を文字列として格納するメソッド。
     //weaponData[i][j]はCSVファイルのi行、j列目のデータを表す。但し先頭行（タイトル部分）は0行目と考えるものとする。
     static void CsvReader()
@@ -41,10 +43,12 @@ public  class CsvDataLoad : MonoBehaviour//MonoBehaviourは継承しない
             WeaponAtk[i] = int.Parse(weaponData[i][2]);
             WeaponBullets[i] = int.Parse(weaponData[i][3]);
             WeaponMoveSpeed[i] = int.Parse(weaponData[i][4]);
+            WeaponReloadTime[i] = float.Parse(weaponData[i][5]);
+            WeaponBulletSize[i] = float.Parse(weaponData[i][6]);
         }
     }
 
-    void Start()
+    void Awake()
     {
         Init();
     }
