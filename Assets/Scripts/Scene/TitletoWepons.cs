@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,3 +11,17 @@ public class TitletoWepons : MonoBehaviour
         SceneManager.LoadScene("WeponsScene");
     }
 }
+=======
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class TitletoWepons : MonoBehaviour
+{
+    public void onButtonClick()
+    {
+        SceneManager.LoadScene("WeponsScene");
+    }
+}
+>>>>>>> gssh

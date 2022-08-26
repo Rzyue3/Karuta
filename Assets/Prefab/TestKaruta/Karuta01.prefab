@@ -121,11 +121,10 @@ MonoBehaviour:
   CardHP: 150
   NextK: 1
   KarutaLabel: 0
+  crackflag: 0
   gamemanager: {fileID: 2222695540724273912, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
-  script: {fileID: 2222695540724273908, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
-  nextkaruta: {fileID: 2222695539609218397, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
-  testpik: {fileID: 2222695539609218369, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
-  gamemaster: {fileID: 2222695540724273915, guid: 22c372ae406c24f01bfbdc529cc3e982, type: 3}
+  crack: {fileID: 0}
+  LimitSpeed: 0
   tett: 0
   tetslabe: 0
 --- !u!1 &3321074931341404149
