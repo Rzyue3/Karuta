@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 5c5b3e0adbbf3f94b98d8eb2c1328bc9
 NativeFormatImporter:
@@ -7,13 +6,3 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-=======
-fileFormatVersion: 2
-guid: 5c5b3e0adbbf3f94b98d8eb2c1328bc9
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>> gssh

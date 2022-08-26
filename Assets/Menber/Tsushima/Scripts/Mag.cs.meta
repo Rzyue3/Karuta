@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fileFormatVersion: 2
 guid: f2c2b217319e31d46b22e812dccaf3f8
 MonoImporter:
@@ -10,16 +9,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-=======
-fileFormatVersion: 2
-guid: f2c2b217319e31d46b22e812dccaf3f8
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>> gssh
