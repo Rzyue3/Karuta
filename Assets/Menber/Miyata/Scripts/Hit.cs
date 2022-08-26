@@ -36,6 +36,9 @@ public class Hit : MonoBehaviour
 
     private Vector3 startpos;
 
+    [SerializeField]
+    private GameObject whiteobj;
+
     void Start()
     {
         startpos = this.gameObject.transform.position;
@@ -202,46 +205,68 @@ public class Hit : MonoBehaviour
     {
         if(Hit.CompareTag("Player1"))
         {
-            //CardHP-=50;
-            CardHP -= Damagesc.player1damage;
-            crack.Damagecrack();
-            Debug.Log("当たりました");
-            crackflag = true;
-            Destroy(Hit);
-            if(CardHP<=0)
+            if(NextK)
             {
-                gamemaster.DestroyCount++;
-                if(NextK)
+                //CardHP-=50;
+                whiteobj.SetActive(true);
+                CardHP -= Damagesc.player1damage;
+                crack.Damagecrack();
+                Debug.Log("当たりました");
+                crackflag = true;
+                Destroy(Hit);
+                if(CardHP<=0)
                 {
                     gamemaster.gameSet(0);
                     this.gameObject.SetActive(false);
+
+                    gamemaster.DestroyCount++;
+                    /*
+                    if(NextK)
+                    {
+                        gamemaster.gameSet(0);
+                        this.gameObject.SetActive(false);
+
+                    }
+                    else
+                    {
+                        this.gameObject.SetActive (false);
+                    }
+                    */
                 }
-                else
-                {
-                    this.gameObject.SetActive (false);
-                }
+
             }
         }
         
         if(Hit.CompareTag("Player2"))
         {
-            //CardHP-=50;
-            CardHP -= Damagesc.player2damage;
-            Debug.Log("当たりました");
-            crackflag = true;
-            Destroy(Hit);
-            if(CardHP<=0)
+            if(NextK)
             {
-                gamemaster.DestroyCount++;
-                if(NextK)
+                //CardHP-=50;
+                whiteobj.SetActive(true);
+                CardHP -= Damagesc.player2damage;
+                Debug.Log("当たりました");
+                crackflag = true;
+                Destroy(Hit);
+                if(CardHP<=0)
                 {
-                    gamemaster.gameSet(1);
+                    gamemaster.gameSet(0);
                     this.gameObject.SetActive(false);
+
+                    gamemaster.DestroyCount++;
+                    /*
+                    if(NextK)
+                    {
+                        gamemaster.gameSet(0);
+                        this.gameObject.SetActive(false);
+
+                    }
+                    else
+                    {
+                        this.gameObject.SetActive (false);
+                    }
+                    */
                 }
-                else
-                {
-                    this.gameObject.SetActive (false);
-                }
+            
             }
         }
        

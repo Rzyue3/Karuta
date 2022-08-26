@@ -13,6 +13,8 @@ public class Shoot : MonoBehaviour
     [SerializeField]
     private float speed = 300f;
 
+    private float time;
+
     [SerializeField]
     Mag mag;
     [SerializeField]
@@ -21,7 +23,12 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire3"))
+        time = Time.deltaTime;
+        if(Input.GetButton("Fire3") && mag.player1Mag >= 10 && time >= 0.3f)
+        {
+            LauncherShot();
+        }
+        else if(Input.GetButtonDown("Fire3"))
         {
             LauncherShot();
         }
@@ -32,6 +39,11 @@ public class Shoot : MonoBehaviour
             exp.blowoff();
         }
         */
+        if(Input.GetMouseButton(0))
+        {
+            LauncherShot();
+        }
+
     }
     private void LauncherShot()
     {
