@@ -21,8 +21,11 @@ public class Icon2P : MonoBehaviour
 
     [SerializeField]
     public static int selectCharaNumber2;
+    public SE se;
+    public AudioClip audioClip;
+    AudioSource audioSource;
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if(other.gameObject == Speedobj)
         {
@@ -47,9 +50,10 @@ public class Icon2P : MonoBehaviour
             Balance2.gameObject.SetActive(false);
             Power2.gameObject.SetActive(true);
         }
-        if(other.gameObject.tag==Readytag && Test.selectCharaNumber1 > 0 && selectCharaNumber2 > 0)
+        if(other.gameObject.tag==Readytag && Test.selectCharaNumber1 > 0 && selectCharaNumber2 > 0 && Input.GetButton("Fire3_2"))
         {
             //loadint.P2csv = selectCharaNumber;
+            se.SettingPlaySE();
             SceneManager.LoadScene("MainGameScene");
         }
     }

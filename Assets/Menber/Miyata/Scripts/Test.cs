@@ -19,8 +19,11 @@ public class Test : MonoBehaviour
 
     [SerializeField]
     public static int selectCharaNumber1;
+    public SE se;
+    public AudioClip audioClip;
+    AudioSource audioSource;
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if(other.gameObject == Speedobj)
         {
@@ -45,11 +48,11 @@ public class Test : MonoBehaviour
             Balance.gameObject.SetActive(false);
             Power.gameObject.SetActive(true);
         }
-        else if(other.gameObject.tag==Readytag && selectCharaNumber1 > 0 && Icon2P.selectCharaNumber2 > 0)
+        else if(other.gameObject.tag==Readytag && selectCharaNumber1 > 0 && Icon2P.selectCharaNumber2 > 0 && Input.GetButton("Fire3"))
         {
             //loadint.P1csv = selectCharaNumber;
+            se.SettingPlaySE();
             SceneManager.LoadScene("MainGameScene");
-
         }
 
     }
