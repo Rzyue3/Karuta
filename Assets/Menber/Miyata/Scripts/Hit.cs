@@ -110,6 +110,16 @@ public class Hit : MonoBehaviour
             Player1Atk = false;
         }
 
+        /*
+        if(Input.GetMouseButtonDown(0))
+        {
+                                gamemaster.gameSet(0);
+                    this.gameObject.SetActive(false);
+
+                    gamemaster.DestroyCount++;
+
+        }
+        */
 
         
 
@@ -207,9 +217,11 @@ public class Hit : MonoBehaviour
         {
             if(NextK)
             {
+
                 //CardHP-=50;
-                whiteobj.SetActive(true);
                 CardHP -= Damagesc.player1damage;
+                if(CardHP <= 145)
+                    whiteobj.SetActive(true);
                 crack.Damagecrack();
                 Debug.Log("当たりました");
                 crackflag = true;
@@ -241,15 +253,18 @@ public class Hit : MonoBehaviour
         {
             if(NextK)
             {
+
                 //CardHP-=50;
-                whiteobj.SetActive(true);
                 CardHP -= Damagesc.player2damage;
+                if(CardHP <= 145)
+                    whiteobj.SetActive(true);
+                crack.Damagecrack();
                 Debug.Log("当たりました");
                 crackflag = true;
                 Destroy(Hit);
                 if(CardHP<=0)
                 {
-                    gamemaster.gameSet(0);
+                    gamemaster.gameSet(1);
                     this.gameObject.SetActive(false);
 
                     gamemaster.DestroyCount++;

@@ -14,6 +14,10 @@ public class Shot2P : MonoBehaviour
     private float speed = 300f;
 
     [SerializeField]
+    private float rp;
+    private float time;
+
+    [SerializeField]
     Mag mag;
     [SerializeField]
     Explosion exp;
@@ -21,6 +25,16 @@ public class Shot2P : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+        if(Input.GetButton("Fire3_2") && Test.selectCharaNumber1 == 1)
+        {
+            if(time>=0.2)
+            {
+                time = 0.0f;
+                LauncherShot2P();
+            }
+        }
+
         if(Input.GetButtonDown("Fire3_2"))
         {
             LauncherShot2P();

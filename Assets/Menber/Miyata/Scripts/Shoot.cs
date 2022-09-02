@@ -13,6 +13,8 @@ public class Shoot : MonoBehaviour
     [SerializeField]
     private float speed = 300f;
 
+    [SerializeField]
+    private float rp;
     private float time;
 
     [SerializeField]
@@ -24,14 +26,20 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         time = Time.deltaTime;
-        if(Input.GetButton("Fire3") && mag.player1Mag >= 10 && time >= 0.3f)
+        if(Input.GetButton("Fire3") && Test.selectCharaNumber1 == 1)
         {
-            LauncherShot();
+            if(time>=0.2)
+            {
+                time = 0.0f;
+                LauncherShot();
+            }
         }
         else if(Input.GetButtonDown("Fire3"))
         {
             LauncherShot();
         }
+
+        
 
         /*
         if(Input.GetMouseButtonDown(0))
@@ -39,10 +47,11 @@ public class Shoot : MonoBehaviour
             exp.blowoff();
         }
         */
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) && Test.selectCharaNumber1 == 1 && time>=0.2)
         {
             LauncherShot();
         }
+        
 
     }
     private void LauncherShot()

@@ -616,7 +616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 93ed302cfc5da4b7399745b61b286d34, type: 3}
+  m_Texture: {fileID: 2800000, guid: cebb539ca6644426593baf8ec3c73a5b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -960,6 +960,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 23995c2e8b483414db255322f9dcac13, type: 3}
       propertyPath: m_Name
       value: Karuta14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 23995c2e8b483414db255322f9dcac13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 23995c2e8b483414db255322f9dcac13, type: 3}
       propertyPath: m_Pivot.x
@@ -1524,6 +1528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta18
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: aaa4079c0980d476d9014d6df8d87708, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: aaa4079c0980d476d9014d6df8d87708, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2063,7 +2071,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1001 &173652617
 PrefabInstance:
@@ -2075,6 +2083,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -2253,6 +2265,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -2579,7 +2595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3038,6 +3054,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -3504,7 +3524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315056465
@@ -3527,7 +3547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b83c572ae7da44aa9979794681820163, type: 3}
+  m_Texture: {fileID: 2800000, guid: e79e003bfac2543c2afd5ae3fde6cc56, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3664,6 +3684,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
       propertyPath: m_Name
       value: Karuta22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
       propertyPath: m_Pivot.x
@@ -5041,6 +5065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta23
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 972907c29baa84209910933b6138c1b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 972907c29baa84209910933b6138c1b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5279,6 +5307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta12
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: a1f8f7c0a3c7248df857d8f0a7a8fc4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: a1f8f7c0a3c7248df857d8f0a7a8fc4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5443,6 +5475,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 86f21f95e9b2c4702bc02ee74a92cbbd, type: 3}
       propertyPath: m_Name
       value: Karuta15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 86f21f95e9b2c4702bc02ee74a92cbbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 86f21f95e9b2c4702bc02ee74a92cbbd, type: 3}
       propertyPath: m_Pivot.x
@@ -5656,7 +5692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b305a1f8f8e5d48c4be208bf385502c0, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2eb5cb962fd66451f85b923f11e9f0de, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5681,6 +5717,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
       propertyPath: m_Name
       value: Karuta25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
       propertyPath: m_Pivot.x
@@ -5856,6 +5896,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -6139,7 +6183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6411,6 +6455,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: cc12359d0ca3d4faa8fd22a5a4894fa5, type: 3}
       propertyPath: m_Name
       value: Karuta09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: cc12359d0ca3d4faa8fd22a5a4894fa5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: cc12359d0ca3d4faa8fd22a5a4894fa5, type: 3}
       propertyPath: m_Pivot.x
@@ -6866,6 +6914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta24
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: f8f1254080af24305a1c7c9a988f3f2f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: f8f1254080af24305a1c7c9a988f3f2f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7030,6 +7082,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
       propertyPath: m_Name
       value: Karuta11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
       propertyPath: m_Pivot.x
@@ -7282,8 +7338,8 @@ RectTransform:
   - {fileID: 1798492919}
   - {fileID: 266339555}
   - {fileID: 1561503939}
-  - {fileID: 2015515455}
   - {fileID: 1135400929}
+  - {fileID: 2015515455}
   - {fileID: 985361859}
   - {fileID: 71631461}
   - {fileID: 1052252647}
@@ -7520,6 +7576,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: cfe3282603bbf4de1b6afb0957e736c9, type: 3}
       propertyPath: m_Name
       value: Karuta05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: cfe3282603bbf4de1b6afb0957e736c9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: cfe3282603bbf4de1b6afb0957e736c9, type: 3}
       propertyPath: m_Pivot.x
@@ -7828,7 +7888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622341021
@@ -7851,7 +7911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d7e334e4a016c42eeae069cae75e74ab, type: 3}
+  m_Texture: {fileID: 2800000, guid: d7cef85fb75fd482493dac576c952261, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -8241,6 +8301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta37
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8594,6 +8658,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
       propertyPath: m_Name
       value: Karuta13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
       propertyPath: m_Pivot.x
@@ -9104,6 +9172,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 3c7c6131a76d646f7a12637d565d9244, type: 3}
       propertyPath: m_Name
       value: Karuta02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 3c7c6131a76d646f7a12637d565d9244, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 3c7c6131a76d646f7a12637d565d9244, type: 3}
       propertyPath: m_Pivot.x
@@ -9800,6 +9872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta34
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10082,7 +10158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10839,7 +10915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873519527
@@ -10862,7 +10938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 307a0d853b97545fabf763816bd97eec, type: 3}
+  m_Texture: {fileID: 2800000, guid: eca733b60b2b54fd5b48d5787904a978, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -11554,6 +11630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta28
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 0a313d9dbbe044c1a8d8fc8bd42e5b87, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 0a313d9dbbe044c1a8d8fc8bd42e5b87, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11714,6 +11794,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
       propertyPath: m_Name
       value: Karuta27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
       propertyPath: m_Pivot.x
@@ -12197,6 +12281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta36
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12539,6 +12627,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -13150,7 +13242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13297,6 +13389,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -13772,9 +13868,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135400928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.88, y: 0.88, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1920547203}
@@ -13784,11 +13880,11 @@ RectTransform:
   - {fileID: 1662152278}
   - {fileID: 803234398}
   m_Father: {fileID: 603472204}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -10, y: 490}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1138821796 stripped
@@ -14241,6 +14337,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -15311,7 +15411,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &1289911696
 MonoBehaviour:
@@ -15775,6 +15875,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -16294,6 +16398,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 68e855cf993fa496ca29acc31d48b2c0, type: 3}
       propertyPath: m_Name
       value: Karuta19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 68e855cf993fa496ca29acc31d48b2c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 68e855cf993fa496ca29acc31d48b2c0, type: 3}
       propertyPath: m_Pivot.x
@@ -16963,6 +17071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta03
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 63353c92dab724b4f9118cf04d4e6bf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 63353c92dab724b4f9118cf04d4e6bf4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -17128,6 +17240,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -17306,6 +17422,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 3f771209ce136454bac4c8c1f1537ba3, type: 3}
       propertyPath: m_Name
       value: Karuta16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 3f771209ce136454bac4c8c1f1537ba3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 3f771209ce136454bac4c8c1f1537ba3, type: 3}
       propertyPath: m_Pivot.x
@@ -17793,6 +17913,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
       propertyPath: m_Name
       value: Karuta26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
       propertyPath: m_Pivot.x
@@ -18489,6 +18613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta17
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 438bf2bacaaa54f9187ddfe94db14735, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 438bf2bacaaa54f9187ddfe94db14735, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18962,6 +19090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta21
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 382441b0eb5664656bc1eedb041aa673, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 382441b0eb5664656bc1eedb041aa673, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -19161,6 +19293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta35
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -19338,6 +19474,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
       propertyPath: m_Name
       value: Karuta07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
       propertyPath: m_Pivot.x
@@ -19571,6 +19711,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 14f003e6ebfe040bc842967234300166, type: 3}
       propertyPath: m_Name
       value: Karuta01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 14f003e6ebfe040bc842967234300166, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 14f003e6ebfe040bc842967234300166, type: 3}
       propertyPath: m_Pivot.x
@@ -19930,7 +20074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628026937
@@ -19953,7 +20097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4f0fe3114cd2a49dd9275a3a07e3c0d6, type: 3}
+  m_Texture: {fileID: 2800000, guid: 36c37b1d2dd634e4aae79409ec9a68d2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -20095,7 +20239,7 @@ PrefabInstance:
       objectReference: {fileID: 71631462}
     - target: {fileID: 3350056832675588868, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3350056832675588877, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_Name
@@ -20123,7 +20267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3350056832804305787, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3350056833609883840, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_SizeDelta.x
@@ -20144,6 +20288,10 @@ PrefabInstance:
     - target: {fileID: 3350056833609883840, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652274818744092853, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4442923575895881223, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_AnchorMax.y
@@ -20505,7 +20653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21499,6 +21647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta06
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: eb8af65c6ed7d4146bd71f355c54abfd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: eb8af65c6ed7d4146bd71f355c54abfd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -21771,6 +21923,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
       propertyPath: m_Name
       value: Karuta08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
       propertyPath: m_Pivot.x
@@ -22463,6 +22619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta20
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 9971e9c2b7c004373b47a514c552bce9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 9971e9c2b7c004373b47a514c552bce9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -22967,6 +23127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta10
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23305,7 +23469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492274502463854683, guid: c135adce5e0274eee9032ebd6cdfa7e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23996,6 +24160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karuta44
       objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -24173,6 +24341,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
       propertyPath: m_Name
       value: Karuta29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
       propertyPath: m_Pivot.x
@@ -24363,7 +24535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994905853
@@ -24386,7 +24558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4e834e243d5134b01834ec36a6bf1ee4, type: 3}
+  m_Texture: {fileID: 2800000, guid: 46f0b4e22f7e94df18fc29d5af9a51f8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -24411,6 +24583,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Name
       value: Karuta33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: m_Pivot.x
@@ -24604,7 +24780,7 @@ RectTransform:
   m_GameObject: {fileID: 2015515454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 75, y: 75, z: 1}
+  m_LocalScale: {x: 65, y: 65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 497273062128906130}
@@ -24614,7 +24790,7 @@ RectTransform:
   - {fileID: 1969492896}
   - {fileID: 1505390720}
   m_Father: {fileID: 603472204}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24796,6 +24972,10 @@ PrefabInstance:
     - target: {fileID: 3321074930028393761, guid: 9c6784a93675f4138818518a8f3a29c6, type: 3}
       propertyPath: m_Name
       value: Karuta04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321074930028393761, guid: 9c6784a93675f4138818518a8f3a29c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321074930028393762, guid: 9c6784a93675f4138818518a8f3a29c6, type: 3}
       propertyPath: m_Pivot.x

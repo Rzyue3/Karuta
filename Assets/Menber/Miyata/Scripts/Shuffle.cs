@@ -54,7 +54,7 @@ public class Shuffle : MonoBehaviour
                 
                 var obj = Instantiate(useList[_cardset], new Vector3( x, y, 5f), Quaternion.identity,Parent2) as GameObject;
                 setList.Add(obj);
-
+                obj.SetActive(true);
                 hit = setList[_cardset].GetComponent<Hit>();
                 hit.tetslabe += _count;
                 hit.NextK = false;
