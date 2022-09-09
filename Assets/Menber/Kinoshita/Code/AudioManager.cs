@@ -110,7 +110,14 @@ public class AudioManager : MonoBehaviour
         W_5,
     }
 
-    
+    public enum GAudioName
+    {
+        BalanceType = 0,
+        SpeedType,
+        PowerType,
+        MissShot,
+        Reload,
+    }
 
     //再生する男性音声をリスト化
     public List<AudioClip> MListAudioClip = new List<AudioClip>();
@@ -118,12 +125,11 @@ public class AudioManager : MonoBehaviour
     //再生する女性音声をリスト化
     public List<AudioClip> WListAudioClip = new List<AudioClip>();
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        //他のスクリプトで再生するコード
+    //武器（銃）のリスト化
+    public List<AudioClip> GListAudioClip = new List<AudioClip>();
+        
+    
         Play(1.0f, EAudioName.M_a);
-    }
 
     // Update is called once per frame
     void Update()
@@ -141,5 +147,56 @@ public class AudioManager : MonoBehaviour
     {
         //
         
+    }
+    public void Play(float speed, WAudioName SoundType)
+    {
+        //銃の種類で鳴らす音を変える]
+        //スピードタイプだったら
+        if()
+        {
+            //装弾数分鳴らす処理
+
+            if(S = 5; S >= 0; S--;)
+            {
+                //リロードせずに球を打ったらMissShotを鳴らす
+            }
+            //リロードを流す
+            else if(S == 0; S + 5;)
+            {
+
+            }
+        }
+        //パワータイプ
+        else if()
+        {
+            //装弾数分鳴らす処理
+
+            if(P = 2; P >= 0; P--;)
+            {
+                //リロードせずに球を打ったらMissShotを鳴らす
+            }
+            //リロードを流す
+            else if(P == 0; P + 2;)
+            {
+
+            }
+        }
+        //バランスタイプ
+        else
+        {
+            //装弾数分鳴らす処理
+
+            if(B = 5; B >= 0; B--;)
+            {
+                //リロードせずに球を打ったらMissShotを鳴らす
+
+            }
+
+            //リロードを流す
+            else if(B == 0; B + 5;)
+            {
+
+            }
+        }
     }
 }
