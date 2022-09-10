@@ -22,6 +22,10 @@ public class Shoot : MonoBehaviour
     [SerializeField]
     Explosion exp;
 
+    public GunSE se;
+    public AudioClip audioClip;
+    AudioSource audioSource;
+
     // Update is called once per frame
     void Update()
     {
@@ -69,6 +73,7 @@ public class Shoot : MonoBehaviour
             newBall.GetComponent<Rigidbody>().AddForce(direction * speed, ForceMode.Impulse);
             // 出現させたボールの名前を"bullet"に変更
             newBall.name = bullet.name;
+           // se.SettingPlaySE();
             mag.reloadMag(0);
             Destroy(newBall, 0.2f);
 

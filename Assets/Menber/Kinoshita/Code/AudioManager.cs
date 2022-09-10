@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    /*
     public enum EAudioName
     {
+        
         M_a = 0,
         M_i,
         M_u,
@@ -109,6 +111,7 @@ public class AudioManager : MonoBehaviour
         W_4,
         W_5,
     }
+    
 
     public enum GAudioName
     {
@@ -118,6 +121,7 @@ public class AudioManager : MonoBehaviour
         MissShot,
         Reload,
     }
+    */
 
     //再生する男性音声をリスト化
     public List<AudioClip> MListAudioClip = new List<AudioClip>();
@@ -129,8 +133,8 @@ public class AudioManager : MonoBehaviour
     public List<AudioClip> GListAudioClip = new List<AudioClip>();
         
     
-        Play(1.0f, EAudioName.M_a);
-
+       // Play(1.0f, EAudioName.M_a);
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -156,12 +160,12 @@ public class AudioManager : MonoBehaviour
         {
             //装弾数分鳴らす処理
 
-            if(S = 5; S >= 0; S--;)
+            if(S = 5; S >= 0; S--)
             {
                 //リロードせずに球を打ったらMissShotを鳴らす
             }
             //リロードを流す
-            else if(S == 0; S + 5;)
+            else if(S == 0; S + 5)
             {
 
             }
@@ -171,7 +175,7 @@ public class AudioManager : MonoBehaviour
         {
             //装弾数分鳴らす処理
 
-            if(P = 2; P >= 0; P--;)
+            if(P = 2; P >= 0; P--)
             {
                 //リロードせずに球を打ったらMissShotを鳴らす
             }
@@ -186,7 +190,7 @@ public class AudioManager : MonoBehaviour
         {
             //装弾数分鳴らす処理
 
-            if(B = 5; B >= 0; B--;)
+            if(B = 5; B >= 0; B--)
             {
                 //リロードせずに球を打ったらMissShotを鳴らす
 
@@ -199,4 +203,5 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+    */
 }
