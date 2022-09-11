@@ -26,7 +26,7 @@ public class Aim : MonoBehaviour
         this.transform.position = target;
         if(Input.GetMouseButtonDown(0))
         {
-            exp.blowoff();
+            exp.blowoff(0);
         }
 
     }

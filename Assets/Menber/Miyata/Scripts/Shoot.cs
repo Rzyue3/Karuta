@@ -79,7 +79,7 @@ public class Shoot : MonoBehaviour
     {
         if(!mag.zeroammo1)
         {
-            exp.blowoff();
+            exp.blowoff(0);
             // 弾を発射する場所を取得
             Vector3 bulletPosition = firingPoint.transform.position;
             // 上で取得した場所に、"bullet"のPrefabを出現させる

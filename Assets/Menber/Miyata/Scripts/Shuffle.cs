@@ -18,18 +18,12 @@ public class Shuffle : MonoBehaviour
 
     public int DestroyNum2;
 
-    Hit hit;
     private GameObject randomObj;   // ランダムに拾ったカルタを格納
     private int choiceNum;  // ランダムに拾ったカルタが被らないように元Listから削除
     private int _cardset;   // 配列の中身を回す
     private float x,y;  // カルタ配置座標
     private GameObject testGameObj;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     public void shufflekaruta()
     {
         for (int i = 0; i < 30; i++)
@@ -55,8 +49,8 @@ public class Shuffle : MonoBehaviour
                 var obj = Instantiate(useList[_cardset], new Vector3( x, y, 5f), Quaternion.identity,Parent2) as GameObject;
                 setList.Add(obj);
                 obj.SetActive(true);
-                hit = setList[_cardset].GetComponent<Hit>();
-                hit.tetslabe += _count;
+                var hit = setList[_cardset].GetComponent<Hit>();
+                hit.Arrangenum += _count;
                 hit.NextK = false;
                 ++_cardset;
                 x += 335;

@@ -849,9 +849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c937479124b4eaab0d6638c6b1684d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_force: 500
-  m_radius: 500
-  m_upwards: 0
+  csvdataload: {fileID: 2222695540722677151}
+  KarutaSize: 175
 --- !u!1 &87126561
 GameObject:
   m_ObjectHideFlags: 0
@@ -13876,9 +13875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c937479124b4eaab0d6638c6b1684d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_force: 500
-  m_radius: 500
-  m_upwards: 0
+  csvdataload: {fileID: 2222695540722677151}
+  KarutaSize: 175
 --- !u!1001 &1057402734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20970,13 +20968,17 @@ PrefabInstance:
       propertyPath: mag
       value: 
       objectReference: {fileID: 2222695540722677152}
+    - target: {fileID: 1912581903563390986, guid: 335e73e81e4999847be748147405116a, type: 3}
+      propertyPath: Firerate
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2336657539384270273, guid: 335e73e81e4999847be748147405116a, type: 3}
       propertyPath: Speed2
       value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 2336657539384270296, guid: 335e73e81e4999847be748147405116a, type: 3}
       propertyPath: m_Name
-      value: P2test
+      value: P2
       objectReference: {fileID: 0}
     - target: {fileID: 2336657539384270296, guid: 335e73e81e4999847be748147405116a, type: 3}
       propertyPath: m_IsActive
@@ -21283,7 +21285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3350056832675588877, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_Name
-      value: P1test
+      value: P1
       objectReference: {fileID: 0}
     - target: {fileID: 3350056832675588877, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: m_IsActive
@@ -21301,6 +21303,10 @@ PrefabInstance:
       propertyPath: mag
       value: 
       objectReference: {fileID: 2222695540722677152}
+    - target: {fileID: 3350056832675588920, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+      propertyPath: Firerate
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3350056832675588920, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: audioClip
       value: 
@@ -27561,7 +27567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5859d73040234b4692877279de3d08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testnextkarutapik: {fileID: 2222695539611863587}
+  nextkarutapik: {fileID: 2222695539611863587}
   gamemanager: {fileID: 2222695540722677146}
   audiomanager: {fileID: 1411859527}
   text: {fileID: 266339556}
@@ -28014,7 +28020,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  WeaponBulletSize:
+  WeaponExpPower:
   - 0
   - 0
   - 0

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 [DisallowMultipleComponent]
 public class GameMaster : MonoBehaviour
 {
-    public TestNextKarutaPik testnextkarutapik;
+    public NextKarutaPik nextkarutapik;
     RoundStart roundstart;
     //public NextKaruta nextkaruta;      // インスペクターから拾う
     Shuffle shuffle;    // シャッフルを格納
@@ -69,45 +69,20 @@ public class GameMaster : MonoBehaviour
         textStop = false;
         audiostart = false;
         shuffle.shufflekaruta();
-//      nextkaruta.pkKrt();
-        testnextkarutapik.startC();
-        testnextkarutapik.randompick();
+        nextkarutapik.startC();
+        nextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
     }
 
     void Update()
     {
+        // もし全てのカルタが破壊されたらタイトルへ戻す
         if(DestroyCount == 30)
         {
             SceneManager.LoadScene("Title");
         }
-        /*
-        if(testbool)
-        {
-            testbool = false;
-            testnextkarutapik.Destroykaruta(textNumber);
-        }
-        
-        // 勝敗
-        if(nextkaruta.P1Score >= 3)
-        {
-            
-        }
-        if(nextkaruta.P2Score >= 3)
-        {
 
-        }
-
-        // 次のラウンドに移行するためのセットアップ
-        if(nextkaruta.NextGM)
-        {
-            nextkaruta.NextGM = false;
-            NextText.GetComponent<Text>().text = null;  // テキストを初期化
-            TimeSet();
-            KarutaSystem();
-        }
-*/
         // テキスト表示
         if(textStop)
         {
@@ -146,23 +121,9 @@ public class GameMaster : MonoBehaviour
     void KarutaSystem()
     {
         _time = 0.0f;
-        textNumber = testnextkarutapik.LabelNum;
+        textNumber = nextkarutapik.LabelNum;
         Debug.Log("GameMaster" + textNumber);
         textStop = true;
-        /*
-        switch(nextkaruta.LabelNum)
-        {
-            case 1:
-            {
-                textStop = true;
-                break;
-            }
-            case 2:
-            {
-                break;
-            }
-        }
-        */
     }
 
     public void audioplay(int i, int j)
@@ -179,6 +140,7 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    // どちらかがカルタを取った時実行
     public void gameSet(int i)
     {
         karutainitpos = true;
@@ -213,37 +175,17 @@ public class GameMaster : MonoBehaviour
 
         }
         displayText = "";
-        //NextText.GetComponent<Text>().text = displayText;
         Debug.Log("テキスト初期化");
         textNumber = -1;
         textCharNumber = 0;
         textStop = false;
         karutainitpos = false;
         audiorand = Random.Range(0,2);
-        testnextkarutapik.randompick();
+        nextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
-        //アタッチしてない早くやれ 07091533
         roundstart.StartCoroutine("FadeCo");
         karutainitpos = false;
 
     }
-/*    void TextTTS()
-    {
-       if (textStop == false) //テキストを表示させるif文
-        { 
-            displayTextSpeed++;
-            if (displayTextSpeed % 5 == 0)//５回に一回プログラムを実行するif文
-            {
-
-                if (textCharNumber != texts[textNumber].Length)//もしtext[textNumber]の文字列の文字が最後の文字じゃなければ
-                {
-                    displayText = displayText + texts[textNumber][textCharNumber];//displayTextに文字を追加していく
-                    textCharNumber = textCharNumber + 1;//次の文字にする
-                }
-            }
-            Text nexttext = NextText.GetComponent<Text> ();
-        } 
-    }
-*/
 }

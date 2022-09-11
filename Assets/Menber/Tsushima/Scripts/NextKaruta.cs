@@ -48,16 +48,16 @@ public class NextKaruta : MonoBehaviour
         if(tetetet)
         {
             hit2 = testObj.GetComponent<Hit>();
-            if(tetetet && DestroyNum == hit2.tetslabe)
+            if(tetetet && DestroyNum == hit2.Arrangenum)
             {
                 Debug.Log("ok");
             }
-            else if (tetetet && DestroyNum != hit2.tetslabe)
+            else if (tetetet && DestroyNum != hit2.Arrangenum)
             {
                 tetetet = false;
                 Debug.Log(DestroyNum);
                 Debug.Log(testint);
-                Debug.Log(hit.tetslabe);
+                Debug.Log($"{hit.Arrangenum}番目に次の答えアリ");
                 Debug.Log("miss");
             }
 
@@ -104,7 +104,7 @@ public class NextKaruta : MonoBehaviour
         if(wakaran)
         {
 
-            testhitnum(hit.tetslabe,DestroyNum);
+            testhitnum(hit.Arrangenum,DestroyNum);
         }
         else
         {
@@ -121,7 +121,7 @@ public class NextKaruta : MonoBehaviour
 
             Debug.Log("LabelNum" + LabelNum);
 
-            Debug.Log("tetslabe.nextK" + hit.tetslabe);
+            Debug.Log("Arrangenum.nextK" + hit.Arrangenum);
 
         }
 
@@ -157,7 +157,7 @@ public class NextKaruta : MonoBehaviour
         Debug.Log("DestroyK1");
         //DestroyNum = shuffle.useList.IndexOf(randomObj);
         Debug.Log("DestroyK2");
-        shuffle.useList.RemoveAt(hit.tetslabe);
+        shuffle.useList.RemoveAt(hit.Arrangenum);
         Destroy(randompickObj);
 
     }

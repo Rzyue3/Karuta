@@ -22,8 +22,7 @@ public class Hit : MonoBehaviour
     public GameObject gamemanager;
     
     Shuffle script;
-    NextKaruta nextkaruta;
-    TestNextKarutaPik testpik;
+    NextKarutaPik nextpik;
     GameMaster gamemaster;
     [SerializeField]
     Cardcrack crack;
@@ -31,8 +30,7 @@ public class Hit : MonoBehaviour
     [SerializeField]
     float LimitSpeed;
 
-    public int tett;
-    public int tetslabe;
+    public int Arrangenum;
 
     private Vector3 startpos;
 
@@ -49,9 +47,8 @@ public class Hit : MonoBehaviour
         Player2Atk = true;
         crackflag = false;
         script = gamemanager.GetComponent<Shuffle>(); 
-        nextkaruta = gamemanager.GetComponent<NextKaruta>();
         gamemaster = gamemanager.GetComponent<GameMaster>();
-        testpik = gamemanager.GetComponent<TestNextKarutaPik>();
+        nextpik = gamemanager.GetComponent<NextKarutaPik>();
     }
 
     void FixedUpdate()
@@ -68,10 +65,9 @@ public class Hit : MonoBehaviour
     {
 
 
-
+        // 画面外にいかないように
         var min = Camera.main.ViewportToWorldPoint(Vector2.zero);
         var max = Camera.main.ViewportToWorldPoint(Vector2.one);
-
         if(this.gameObject.transform.position.x < min.x || this.gameObject.transform.position.y < min.y || this.gameObject.transform.position.x > min.x || this.gameObject.transform.position.y > min.y)
         {
             Debug.Log("成功");
@@ -115,120 +111,18 @@ public class Hit : MonoBehaviour
             Player1ct = true;
             Player1Atk = false;
         }
-
-        /*
-        if(Input.GetMouseButtonDown(0))
-        {
-                                gamemaster.gameSet(0);
-                    this.gameObject.SetActive(false);
-
-                    gamemaster.DestroyCount++;
-
-        }
-        */
-
-        
-
-        /*
-        if(Player2Atk &&Input.GetMouseButtonDown(0) && Player2CT)
-        {
-            Player2ct = true;
-            Player2Atk = false;
-        }
-        */
-
     }
-    /*
-    public void OnTriggerStay(Collider Hit)
-    {
-        //Debug.Log("ColHit");
-        //Debug.Log("hitLabelNum" + nextkaruta.LabelNum);
-        if(!Player1Atk)
-        {
-            Player1CT = false;
-        }
-        if(!Player2Atk)
-        {
-            Player2CT = false;
-        }
 
-        if (Hit.CompareTag("Player1"))
-        {
-            Player1CT = true;
-            if(Player1ct)
-            {
-                //gamemaster.tetetest = tetslabe;
-                Player1ct = false;
-                Debug.Log("Hit!!");
-                CardHP -= 50;
-//                CardHP -= damagesc.player1damage;
-                // �J�[�h��HP��0�ɂȂ����炱�̃I�u�W�F�N�g��j��
-                if (CardHP <= 0)
-                {
-                    Debug.Log("NextK" +NextK);
-                    if(NextK)
-                    {
-                        gamemaster.gameSet(1);
-//                        gamemaster.testText();
-                        this.gameObject.SetActive(false);
 
-                        //nextkaruta.NextKRe1 = true;
-                    }
-                    else
-                    {
-
-                        // useListから削除
-                        //DestroyNum = script.setList.IndexOf(this.gameObject);
-                        //script.setList.Remove(this.gameObject);
-                        //Destroy(this.gameObject);
-                        this.gameObject.SetActive (false);
-
-                    }
-                    
-                }
-            }           
-        }
-
-        
-        if (Hit.CompareTag("Player2"))
-        {
-            Player2CT = true;
-            if(Player2ct)
-            {
-                Player2ct = false;
-                Debug.Log("Hit!!");
-                CardHP -= 50;
-                CardHP -= damagesc.player2damage;
-                // �J�[�h��HP��0�ɂȂ����炱�̃I�u�W�F�N�g��j��
-                if (CardHP <= 0)
-                {
-                    if(NextK)
-                    {
-                        Debug.Log("NextK");
-                        nextkaruta.NextKRe2 = true;
-                    }
-                    // useListから削除
-                    DestroyNum = script.useList.IndexOf(this.gameObject);
-                    script.useList.RemoveAt(DestroyNum);
-                    Destroy(this.gameObject);
-                }
-            }           
-        }
-        
-    }
-    */
     public void OnTriggerEnter(Collider Hit)
     {
         if(Hit.CompareTag("Player1"))
         {
             if(NextK)
             {
-
-                //CardHP-=50;
                 CardHP -= Damagesc.player1damage;
                 if(CardHP <= 145)
                     whiteobj.SetActive(true);
-
                 Debug.Log("当たりました");
                 crackflag = true;
                 Destroy(Hit);
@@ -238,22 +132,8 @@ public class Hit : MonoBehaviour
                     Rightletter.sortingOrder = 10;
                     gamemaster.gameSet(0);
                     this.gameObject.SetActive(false);
-
                     gamemaster.DestroyCount++;
-                    /*
-                    if(NextK)
-                    {
-                        gamemaster.gameSet(0);
-                        this.gameObject.SetActive(false);
-
-                    }
-                    else
-                    {
-                        this.gameObject.SetActive (false);
-                    }
-                    */
                 }
-
             }
         }
         
@@ -261,8 +141,6 @@ public class Hit : MonoBehaviour
         {
             if(NextK)
             {
-
-                //CardHP-=50;
                 CardHP -= Damagesc.player2damage;
                 if(CardHP <= 145)
                     whiteobj.SetActive(true);
@@ -274,52 +152,15 @@ public class Hit : MonoBehaviour
                 {
                     gamemaster.gameSet(1);
                     this.gameObject.SetActive(false);
-
                     gamemaster.DestroyCount++;
-                    /*
-                    if(NextK)
-                    {
-                        gamemaster.gameSet(0);
-                        this.gameObject.SetActive(false);
-
-                    }
-                    else
-                    {
-                        this.gameObject.SetActive (false);
-                    }
-                    */
                 }
-            
             }
         }
        
     }
-    /*
-    使わないかもしれない
-    void getkaruta()
-    {
-        if(NextKRe)
-        {
-            ここにカルタ取得時拡大処理
-            transform
-            Input.GetMouseButtonDown(0)
-                DestroyNum = script.useList.IndexOf(this.gameObject);
-                script.useList.RemoveAt(DestroyNum);
-                Destroy(this.gameObject);
-
-        }
-
-*/
-        
-    
-    
 
 
     
-    public void Damage()
-    {
-        Debug.Log("HP-");
-        Debug.Log(tetslabe);
-    }
+
 
 }

@@ -30,7 +30,6 @@ public class Hit2P : MonoBehaviour
                 {
                     Debug.Log("当たった");
                     script = hit.collider.GetComponent<Hit>();
-                    script.Damage();
                     //Destroy(hit.collider.gameObject); // �I�u�W�F�N�g��j��
                 }
             }
