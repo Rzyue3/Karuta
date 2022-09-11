@@ -39,6 +39,9 @@ public class Hit : MonoBehaviour
     [SerializeField]
     private GameObject whiteobj;
 
+    [SerializeField]
+    private Canvas Rightletter;
+
     void Start()
     {
         startpos = this.gameObject.transform.position;
@@ -63,6 +66,9 @@ public class Hit : MonoBehaviour
 
     void Update()
     {
+
+
+
         var min = Camera.main.ViewportToWorldPoint(Vector2.zero);
         var max = Camera.main.ViewportToWorldPoint(Vector2.one);
 
@@ -222,12 +228,14 @@ public class Hit : MonoBehaviour
                 CardHP -= Damagesc.player1damage;
                 if(CardHP <= 145)
                     whiteobj.SetActive(true);
-                crack.Damagecrack();
+
                 Debug.Log("当たりました");
                 crackflag = true;
                 Destroy(Hit);
+                crack.Damagecrack();
                 if(CardHP<=0)
                 {
+                    Rightletter.sortingOrder = 10;
                     gamemaster.gameSet(0);
                     this.gameObject.SetActive(false);
 

@@ -14,8 +14,13 @@ public class Shoot : MonoBehaviour
     private float speed = 300f;
 
     [SerializeField]
+    private float Firerate;
+
+    [SerializeField]
     private float rp;
     private float time;
+
+    private bool speedtype;
 
     [SerializeField]
     Mag mag;
@@ -29,21 +34,33 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time = Time.deltaTime;
-        if(Input.GetButton("Fire3") && Test.selectCharaNumber1 == 1)
+        time += Time.deltaTime;
+
+        if(speedtype)
         {
-            if(time>=0.2)
+            Debug.Log("フルオート");
+            if(time>=Firerate)
             {
+                
                 time = 0.0f;
                 LauncherShot();
             }
+
+        }
+
+        if(Input.GetButtonDown("Fire3") && Test.selectCharaNumber1 == 1)
+        {
+            speedtype = true;
         }
         else if(Input.GetButtonDown("Fire3"))
         {
             LauncherShot();
         }
 
-        
+        if(Input.GetButtonUp("Fire3"))
+        {
+            speedtype = false;
+        }
 
         /*
         if(Input.GetMouseButtonDown(0))

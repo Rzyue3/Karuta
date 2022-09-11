@@ -14,8 +14,13 @@ public class Shot2P : MonoBehaviour
     private float speed = 300f;
 
     [SerializeField]
+    private float Firerate;
+
+    [SerializeField]
     private float rp;
     private float time;
+
+    private bool speedtype;
 
     [SerializeField]
     Mag mag;
@@ -26,19 +31,33 @@ public class Shot2P : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if(Input.GetButton("Fire3_2") && Test.selectCharaNumber1 == 1)
+
+        if(speedtype)
         {
-            if(time>=0.2)
+            Debug.Log("フルオート");
+            if(time>=Firerate)
             {
+                
                 time = 0.0f;
                 LauncherShot2P();
             }
+
         }
 
-        if(Input.GetButtonDown("Fire3_2"))
+        if(Input.GetButtonDown("Fire3_2") && Test.selectCharaNumber1 == 1)
+        {
+            speedtype = true;
+        }
+        else if(Input.GetButtonDown("Fire3_2"))
         {
             LauncherShot2P();
         }
+
+        if(Input.GetButtonUp("Fire3_2"))
+        {
+            speedtype = false;
+        }
+
     }
     private void LauncherShot2P()
     {
