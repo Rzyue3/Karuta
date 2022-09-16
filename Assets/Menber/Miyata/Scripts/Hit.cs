@@ -129,7 +129,7 @@ public class Hit : MonoBehaviour
                 crack.Damagecrack();
                 if(CardHP<=0)
                 {
-                    Rightletter.sortingOrder = 10;
+                    Rightletter.sortingOrder = 20;
 //                    StartCoroutine(gamemaster.gameSetco(0,this.gameObject));
                     gamemaster.gameSetco(0,this.gameObject);
                     this.gameObject.SetActive(false);
@@ -153,6 +153,7 @@ public class Hit : MonoBehaviour
                 Destroy(Hit);
                 if(CardHP<=0)
                 {
+                    Rightletter.sortingOrder = 20;
 //                    StartCoroutine(gamemaster.gameSetco(1,this.gameObject));
                     gamemaster.gameSetco(1,this.gameObject);
                     this.gameObject.SetActive(false);

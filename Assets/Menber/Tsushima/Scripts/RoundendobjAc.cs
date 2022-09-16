@@ -7,21 +7,6 @@ public class RoundendobjAc : MonoBehaviour
 {
     public List<GameObject> endobj = new List<GameObject>();
 
-    [SerializeField]
-    private GameObject Testobj;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            //StartCoroutine(objactive(0,Testobj));
-        }
-    }
 
     public IEnumerator objactive(int i,int Num, GameObject obj)
     {
@@ -64,7 +49,8 @@ public class RoundendobjAc : MonoBehaviour
                 endobj[j].SetActive(true);
                 yield return new WaitForSeconds(1);
             }
-            var canv = obj.GetComponent<Canvas>();
+            var sprd = obj.GetComponent<Canvas>();
+            sprd.sortingOrder = 15;
             obj.transform.position = new Vector3(-1100f,0,0);
             Vector3 kero;  //①仮の変数宣言
 
