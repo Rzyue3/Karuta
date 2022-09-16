@@ -130,8 +130,11 @@ public class Hit : MonoBehaviour
                 if(CardHP<=0)
                 {
                     Rightletter.sortingOrder = 10;
-                    gamemaster.gameSet(0);
+//                    StartCoroutine(gamemaster.gameSetco(0,this.gameObject));
+                    gamemaster.gameSetco(0,this.gameObject);
                     this.gameObject.SetActive(false);
+                    crack.destroyimg();
+                    whiteobj.SetActive(false);
                     gamemaster.DestroyCount++;
                 }
             }
@@ -150,8 +153,11 @@ public class Hit : MonoBehaviour
                 Destroy(Hit);
                 if(CardHP<=0)
                 {
-                    gamemaster.gameSet(1);
+//                    StartCoroutine(gamemaster.gameSetco(1,this.gameObject));
+                    gamemaster.gameSetco(0,this.gameObject);
                     this.gameObject.SetActive(false);
+                    crack.destroyimg();
+                    whiteobj.SetActive(false);
                     gamemaster.DestroyCount++;
                 }
             }

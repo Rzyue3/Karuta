@@ -17,6 +17,9 @@ public class GameMaster : MonoBehaviour
     [SerializeField]
     AudioManager audiomanager;
 
+    [SerializeField]
+    RoundendobjAc Robjac;
+
     //private GameObject NextText; // Textオブジェクト
     [SerializeField]
     private Text text;
@@ -140,6 +143,57 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+
+    public void gameSetco(int i, GameObject obj)
+    {
+        karutainitpos = true;
+        StartCoroutine(Robjac.objactive(i,textNumber,obj));
+        if(i == 0)
+        {
+            P1Score++;
+            switch(P1Score)
+            {
+                case 1:scoreobj[0].SetActive(true);break;
+                case 2:scoreobj[1].SetActive(true);break;
+                case 3:scoreobj[2].SetActive(true);break;
+            }
+            Debug.Log("Player1Score:" + P1Score);
+            if(P1Score == 3)
+            {
+                SceneManager.LoadScene("Win");
+            }
+        }
+        else
+        {
+            P2Score++;
+            switch(P2Score)
+            {
+                case 1:scoreobj[3].SetActive(true);break;
+                case 2:scoreobj[4].SetActive(true);break;
+                case 3:scoreobj[5].SetActive(true);break;
+            }
+            if(P2Score == 3)
+            {
+                SceneManager.LoadScene("Lose");
+            }
+
+        }
+        StartCoroutine(roundstart.FadeCo(0));
+        displayText = "";
+        Debug.Log("テキスト初期化");
+        textNumber = -1;
+        textCharNumber = 0;
+        textStop = false;
+        karutainitpos = false;
+        audiorand = Random.Range(0,2);
+        nextkarutapik.randompick();
+        TimeSet();
+        KarutaSystem();
+
+        karutainitpos = false;
+    }
+
+/*
     // どちらかがカルタを取った時実行
     public void gameSet(int i)
     {
@@ -188,4 +242,5 @@ public class GameMaster : MonoBehaviour
         karutainitpos = false;
 
     }
+*/
 }

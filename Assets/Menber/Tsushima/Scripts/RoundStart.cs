@@ -26,7 +26,7 @@ public class RoundStart : MonoBehaviour
         gamemaster.textStop = false;
         _canvasGroup = roundstartobj.GetComponent<CanvasGroup>();
 
-        StartCoroutine("FadeCo");
+        StartCoroutine(FadeCo(1));
     }
 
     void Update()
@@ -35,8 +35,9 @@ public class RoundStart : MonoBehaviour
     }
 
 
-    private IEnumerator FadeCo()
+    public IEnumerator FadeCo(int i)
     {
+
         _canvasGroup = roundstartobj.GetComponent<CanvasGroup>();
         P1Crosshair.SetActive(false);
         P2Crosshair.SetActive(false);
@@ -45,6 +46,9 @@ public class RoundStart : MonoBehaviour
         text.text = _count.ToString() + "枚目";
 
         gamemaster.textStop = false;
+        if(i == 0)
+            yield return new WaitForSeconds(7.5f);
+
             // 透明度が0以上なら繰り返す
             while(1.0f > _canvasGroup.alpha)
             {

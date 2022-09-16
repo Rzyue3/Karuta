@@ -18,7 +18,6 @@ public class Cardcrack : MonoBehaviour
 
     void Update()
     {
-        
         if(Input.GetMouseButtonDown(1))
         {
             Damagecrack();
@@ -32,5 +31,10 @@ public class Cardcrack : MonoBehaviour
         Debug.Log(0.0067f * (150 - hit.CardHP));
         crack.fillAmount += 0.0067f * (150 - hit.CardHP);
 
+    }
+
+    public void destroyimg()
+    {
+        crack.fillAmount = 0.0f;
     }
 }
