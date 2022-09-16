@@ -20,7 +20,7 @@ public class Shot2P : MonoBehaviour
     private float rp;
     private float time;
 
-    private bool speedtype;
+    public bool speedtype;
 
     [SerializeField]
     Mag mag;

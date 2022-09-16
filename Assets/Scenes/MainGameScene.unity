@@ -1149,7 +1149,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 23995c2e8b483414db255322f9dcac13, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 23995c2e8b483414db255322f9dcac13, type: 3}
       propertyPath: Rightletter
       value: 
@@ -1914,7 +1914,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: aaa4079c0980d476d9014d6df8d87708, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: aaa4079c0980d476d9014d6df8d87708, type: 3}
       propertyPath: Rightletter
       value: 
@@ -2482,7 +2482,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 41
@@ -2668,7 +2668,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 39
@@ -3461,7 +3461,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 37
@@ -4112,7 +4112,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 7c74dfb12076543659817b03c8bd1bcc, type: 3}
       propertyPath: Rightletter
       value: 
@@ -5671,7 +5671,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 972907c29baa84209910933b6138c1b8, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 972907c29baa84209910933b6138c1b8, type: 3}
       propertyPath: Rightletter
       value: 
@@ -5917,7 +5917,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: a1f8f7c0a3c7248df857d8f0a7a8fc4d, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: a1f8f7c0a3c7248df857d8f0a7a8fc4d, type: 3}
       propertyPath: Rightletter
       value: 
@@ -6090,7 +6090,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 86f21f95e9b2c4702bc02ee74a92cbbd, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 86f21f95e9b2c4702bc02ee74a92cbbd, type: 3}
       propertyPath: Rightletter
       value: 
@@ -6336,7 +6336,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: b765bfe141bce4cefb38bc76091619e0, type: 3}
       propertyPath: Rightletter
       value: 
@@ -6634,7 +6634,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 42
@@ -7189,7 +7189,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: cc12359d0ca3d4faa8fd22a5a4894fa5, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: cc12359d0ca3d4faa8fd22a5a4894fa5, type: 3}
       propertyPath: Rightletter
       value: 
@@ -7749,7 +7749,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: f8f1254080af24305a1c7c9a988f3f2f, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: f8f1254080af24305a1c7c9a988f3f2f, type: 3}
       propertyPath: Rightletter
       value: 
@@ -7922,7 +7922,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: dd629d224d30b4826b0f54ca43555101, type: 3}
       propertyPath: Rightletter
       value: 
@@ -8417,7 +8417,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: cfe3282603bbf4de1b6afb0957e736c9, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: cfe3282603bbf4de1b6afb0957e736c9, type: 3}
       propertyPath: Rightletter
       value: 
@@ -9195,7 +9195,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 36
@@ -9553,7 +9553,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: c0a8f115d31db4deab5d02ae0d631b78, type: 3}
       propertyPath: Rightletter
       value: 
@@ -9895,7 +9895,7 @@ PrefabInstance:
     - target: {fileID: -3602427914843845871, guid: 3c7c6131a76d646f7a12637d565d9244, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: -3602427914843845871, guid: 3c7c6131a76d646f7a12637d565d9244, type: 3}
       propertyPath: Rightletter
       value: 
@@ -10778,7 +10778,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 33
@@ -12685,7 +12685,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 0a313d9dbbe044c1a8d8fc8bd42e5b87, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 0a313d9dbbe044c1a8d8fc8bd42e5b87, type: 3}
       propertyPath: Rightletter
       value: 
@@ -12858,7 +12858,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
       propertyPath: Rightletter
       value: 
@@ -13464,7 +13464,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 35
@@ -13832,7 +13832,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: Rightletter
       value: 
@@ -14380,10 +14380,10 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6eef94a992aaa4aadb847ff427da5644, type: 3}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 180
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -14622,7 +14622,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 30
@@ -15748,7 +15748,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 31
@@ -17332,7 +17332,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 40
@@ -17918,7 +17918,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 68e855cf993fa496ca29acc31d48b2c0, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 68e855cf993fa496ca29acc31d48b2c0, type: 3}
       propertyPath: Rightletter
       value: 
@@ -18632,7 +18632,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 63353c92dab724b4f9118cf04d4e6bf4, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 63353c92dab724b4f9118cf04d4e6bf4, type: 3}
       propertyPath: Rightletter
       value: 
@@ -18835,7 +18835,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 38
@@ -19038,7 +19038,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 3f771209ce136454bac4c8c1f1537ba3, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 3f771209ce136454bac4c8c1f1537ba3, type: 3}
       propertyPath: Rightletter
       value: 
@@ -19533,7 +19533,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 4949d956e5e534777b301ae60243e26e, type: 3}
       propertyPath: Rightletter
       value: 
@@ -20369,7 +20369,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 438bf2bacaaa54f9187ddfe94db14735, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 438bf2bacaaa54f9187ddfe94db14735, type: 3}
       propertyPath: Rightletter
       value: 
@@ -20846,7 +20846,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 382441b0eb5664656bc1eedb041aa673, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 382441b0eb5664656bc1eedb041aa673, type: 3}
       propertyPath: Rightletter
       value: 
@@ -21083,7 +21083,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 34
@@ -21282,7 +21282,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 4757aa8ee92d94a9a8d3426e5261445f, type: 3}
       propertyPath: Rightletter
       value: 
@@ -21384,7 +21384,7 @@ PrefabInstance:
     - target: {fileID: -8716235486074909241, guid: 14f003e6ebfe040bc842967234300166, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: -8716235486074909241, guid: 14f003e6ebfe040bc842967234300166, type: 3}
       propertyPath: Rightletter
       value: 
@@ -21625,7 +21625,7 @@ PrefabInstance:
       objectReference: {fileID: 2222695540722677152}
     - target: {fileID: 1912581903563390986, guid: 335e73e81e4999847be748147405116a, type: 3}
       propertyPath: Firerate
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2336657539384270273, guid: 335e73e81e4999847be748147405116a, type: 3}
       propertyPath: Speed2
@@ -21726,6 +21726,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2336657539384270278, guid: 335e73e81e4999847be748147405116a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 335e73e81e4999847be748147405116a, type: 3}
+--- !u!114 &1618551199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1912581903563390986, guid: 335e73e81e4999847be748147405116a, type: 3}
+  m_PrefabInstance: {fileID: 1618551198}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052252646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78064177411e8a24683a13b03982acf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627445667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3321074930028393761, guid: ea1c3f6b6a67f41a1a8ad00e8490336c, type: 3}
@@ -21981,7 +21992,7 @@ PrefabInstance:
       objectReference: {fileID: 2222695540722677152}
     - target: {fileID: 3350056832675588920, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: Firerate
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3350056832675588920, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
       propertyPath: audioClip
@@ -22034,6 +22045,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3350056832675588870, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+--- !u!114 &1643834863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3350056832675588920, guid: cc773508b69f90f4c831e42dc48d2adf, type: 3}
+  m_PrefabInstance: {fileID: 1643834862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71631460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb32f10655fa9449ba83c81e63f3407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646879475
 GameObject:
   m_ObjectHideFlags: 0
@@ -23629,7 +23651,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: eb8af65c6ed7d4146bd71f355c54abfd, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: eb8af65c6ed7d4146bd71f355c54abfd, type: 3}
       propertyPath: Rightletter
       value: 
@@ -23910,7 +23932,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 7886397525b204dca9463c4ca3d4c0f6, type: 3}
       propertyPath: Rightletter
       value: 
@@ -24767,7 +24789,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 9971e9c2b7c004373b47a514c552bce9, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 9971e9c2b7c004373b47a514c552bce9, type: 3}
       propertyPath: Rightletter
       value: 
@@ -25275,7 +25297,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 0e8f17dcf1f744209babeb9985ca74ba, type: 3}
       propertyPath: Rightletter
       value: 
@@ -26439,7 +26461,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 43
@@ -26642,7 +26664,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: b318b06c5237542d2bb19314db4d5f46, type: 3}
       propertyPath: Rightletter
       value: 
@@ -26892,7 +26914,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 326fabe7495e746d9b8991ceef5a1c2c, type: 3}
       propertyPath: KarutaLabel
       value: 32
@@ -26967,7 +26989,7 @@ PrefabInstance:
     - target: {fileID: -8716235486074909241, guid: 14f003e6ebfe040bc842967234300166, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: -8716235486074909241, guid: 14f003e6ebfe040bc842967234300166, type: 3}
       propertyPath: gamemanager
       value: 
@@ -27141,11 +27163,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
---- !u!1 &2014168557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3321074930028393761, guid: 14f003e6ebfe040bc842967234300166, type: 3}
-  m_PrefabInstance: {fileID: 2014168553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2015515454
 GameObject:
   m_ObjectHideFlags: 0
@@ -27532,7 +27549,7 @@ PrefabInstance:
     - target: {fileID: 4057646486626364952, guid: 9c6784a93675f4138818518a8f3a29c6, type: 3}
       propertyPath: nextkaruta
       value: 
-      objectReference: {fileID: 2222695539611863615}
+      objectReference: {fileID: 0}
     - target: {fileID: 4057646486626364952, guid: 9c6784a93675f4138818518a8f3a29c6, type: 3}
       propertyPath: Rightletter
       value: 
@@ -27749,7 +27766,6 @@ MonoBehaviour:
   - {fileID: 481566094}
   - {fileID: 537114038}
   - {fileID: 1144833552}
-  Testobj: {fileID: 2014168557}
 --- !u!1 &2123148250
 GameObject:
   m_ObjectHideFlags: 0
@@ -28396,34 +28412,6 @@ MonoBehaviour:
   LabelNum: 0
   thiskaruta: 0
   deletetest: 0
---- !u!114 &2222695539611863615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2222695540722677146}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58fb77a72a6784dddac9ae4a73dd878c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Sf: {fileID: 2222695540722677146}
-  randompickObj: {fileID: 0}
-  shuffle: {fileID: 2222695540722677142}
-  gamemaster: {fileID: 2222695540722677145}
-  P1Score: 0
-  P2Score: 0
-  LabelNum: 0
-  DestroyNum: 0
-  NextKRe1: 0
-  NextKRe2: 0
-  NextGM: 0
-  testint: 0
-  testflag: 0
-  tetetet: 0
-  wakaran: 0
-  test004: 0
 --- !u!114 &2222695540722677142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28565,6 +28553,8 @@ MonoBehaviour:
   - {fileID: 873183565}
   audiorand: 0
   audiostart: 0
+  shot1p: {fileID: 1643834863}
+  shot2p: {fileID: 1618551199}
   karutainitpos: 0
 --- !u!1 &2222695540722677146
 GameObject:
@@ -28579,7 +28569,6 @@ GameObject:
   - component: {fileID: 2222695540722677145}
   - component: {fileID: 2222695539611863587}
   - component: {fileID: 2222695540722677148}
-  - component: {fileID: 2222695539611863615}
   - component: {fileID: 2222695540722677150}
   - component: {fileID: 2222695540722677151}
   - component: {fileID: 2222695540722677152}

@@ -54,6 +54,11 @@ public class GameMaster : MonoBehaviour
     AudioSource audioSource;
     public bool audiostart;
 
+    [SerializeField]
+    Shoot shot1p;
+    [SerializeField]
+    Shot2P shot2p;
+
     public bool karutainitpos;
 
     void Start()
@@ -149,6 +154,14 @@ public class GameMaster : MonoBehaviour
     public void gameSetco(int i, GameObject obj)
     {
         karutainitpos = true;
+        shot1p.speedtype = false;
+        shot2p.speedtype = false;
+        displayText = "";
+        Debug.Log("テキスト初期化");
+        textNumber = -1;
+        textCharNumber = 0;
+        textStop = false;
+        karutainitpos = false;
         StartCoroutine(Robjac.objactive(i,textNumber,obj));
         _time = 0.0f;
         if(i == 0)
@@ -182,12 +195,7 @@ public class GameMaster : MonoBehaviour
 
         }
 
-        displayText = "";
-        Debug.Log("テキスト初期化");
-        textNumber = -1;
-        textCharNumber = 0;
-        textStop = false;
-        karutainitpos = false;
+
         audiorand = Random.Range(0,2);
         nextkarutapik.randompick();
         TimeSet();

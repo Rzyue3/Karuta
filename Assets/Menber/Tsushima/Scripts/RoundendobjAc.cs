@@ -42,7 +42,7 @@ public class RoundendobjAc : MonoBehaviour
         }
         else if(i == 1)
         {
-            for(int j = 5; j < 8; j++)
+            for(int j = 4; j < 8; j++)
             {
                 var img = endobj[j].GetComponent<Image>();
                 img.fillAmount = 0;
@@ -63,7 +63,7 @@ public class RoundendobjAc : MonoBehaviour
             obj.transform.localScale = kero; //③大きさに変数keroを代入
             obj.SetActive(true);
             yield return new WaitForSeconds(4);
-            for(int z = 0; z < 4;z++)
+            for(int z = 4; z < 8;z++)
             {
                 endobj[z].SetActive(false);
             }

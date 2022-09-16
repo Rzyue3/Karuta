@@ -1,4 +1,4 @@
 ﻿ID,Name,AtkPower,Bullets,MoveSpeed,Reload,ExpPower
-1,Speed,20,15,6000,1.5,500
-2,Balans,50,3,6000,2,1000
-3,Power,140,2,6000,2.5,2000
+1,Speed,15,15,6000,1.5,500
+2,Balans,50,3,6000,2,750
+3,Power,140,2,6000,2.5,1000
