@@ -10,8 +10,8 @@ public class Mag : MonoBehaviour
     public bool zeroammo1;
     public bool zeroammo2;
     
-    private int nowP1mag;
-    private int nowP2mag;
+    public int nowP1mag;
+    public int nowP2mag;
     private float player1ReTime;
     private float player2ReTime;
     private float _count1;

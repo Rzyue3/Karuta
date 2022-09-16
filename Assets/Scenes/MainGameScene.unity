@@ -6423,10 +6423,10 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 0
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &537114042
@@ -11036,10 +11036,10 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 0
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!114 &807638197
@@ -15143,10 +15143,10 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 0
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1144833556
@@ -28153,10 +28153,10 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 0
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!114 &2133660362
@@ -29069,6 +29069,8 @@ MonoBehaviour:
   player2Mag: 0
   zeroammo1: 0
   zeroammo2: 0
+  nowP1mag: 0
+  nowP2mag: 0
   csvdataload: {fileID: 2222695540722677151}
   player1cooldown: {fileID: 934248927}
   player2cooldown: {fileID: 1298385574}
@@ -29179,6 +29181,18 @@ PrefabInstance:
     - target: {fileID: 7803041164411102193, guid: 6c9b4af67230c4ef5a591a6d662adb07, type: 3}
       propertyPath: m_Name
       value: NextKarutaText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803041164411102199, guid: 6c9b4af67230c4ef5a591a6d662adb07, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803041164411102199, guid: 6c9b4af67230c4ef5a591a6d662adb07, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803041164411102199, guid: 6c9b4af67230c4ef5a591a6d662adb07, type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c9b4af67230c4ef5a591a6d662adb07, type: 3}

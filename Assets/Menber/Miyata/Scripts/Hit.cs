@@ -154,7 +154,7 @@ public class Hit : MonoBehaviour
                 if(CardHP<=0)
                 {
 //                    StartCoroutine(gamemaster.gameSetco(1,this.gameObject));
-                    gamemaster.gameSetco(0,this.gameObject);
+                    gamemaster.gameSetco(1,this.gameObject);
                     this.gameObject.SetActive(false);
                     crack.destroyimg();
                     whiteobj.SetActive(false);

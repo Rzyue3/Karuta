@@ -117,6 +117,8 @@ public class GameMaster : MonoBehaviour
     // 読み上げるタイミングをランダムにする
     void TimeSet()
     {
+        if(DestroyCount >= 1)
+            _randTime = Random.Range(10.0f,20.0f);
         _randTime = Random.Range(2.0f,10.0f);
     }
 
@@ -148,6 +150,7 @@ public class GameMaster : MonoBehaviour
     {
         karutainitpos = true;
         StartCoroutine(Robjac.objactive(i,textNumber,obj));
+        _time = 0.0f;
         if(i == 0)
         {
             P1Score++;
@@ -178,7 +181,7 @@ public class GameMaster : MonoBehaviour
             }
 
         }
-        StartCoroutine(roundstart.FadeCo(0));
+
         displayText = "";
         Debug.Log("テキスト初期化");
         textNumber = -1;
@@ -189,7 +192,7 @@ public class GameMaster : MonoBehaviour
         nextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
-
+        StartCoroutine(roundstart.FadeCo(0));
         karutainitpos = false;
     }
 

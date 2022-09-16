@@ -62,6 +62,10 @@ public class Shoot : MonoBehaviour
             speedtype = false;
         }
 
+        if(mag.nowP1mag == 0)
+        {
+            speedtype = false;
+        }
         /*
         if(Input.GetMouseButtonDown(0))
         {

@@ -58,6 +58,12 @@ public class Shot2P : MonoBehaviour
             speedtype = false;
         }
 
+        if(mag.nowP2mag == 0)
+        {
+            speedtype = false;
+        }
+
+
     }
     private void LauncherShot2P()
     {
