@@ -41,9 +41,9 @@ public class GameMaster : MonoBehaviour
     public int DestroyCount;
     
     [SerializeField]
-    private int P1Score;
+    public int P1Score;
     [SerializeField]
-    private int P2Score;
+    public int P2Score;
     [SerializeField]
     private List<GameObject> scoreobj;
     private float initTime;
@@ -52,6 +52,12 @@ public class GameMaster : MonoBehaviour
     public bool audiostart;
 
     public bool karutainitpos;
+
+    [SerializeField]
+    private Win1P win1p;
+    [SerializeField]
+    private Win2P win2p;
+
 
     void Start()
     {
@@ -194,7 +200,7 @@ public class GameMaster : MonoBehaviour
             Debug.Log("Player1Score:" + P1Score);
             if(P1Score == 3)
             {
-                SceneManager.LoadScene("Win");
+                win1p.Result();
             }
         }
         else
@@ -208,7 +214,7 @@ public class GameMaster : MonoBehaviour
             }
             if(P2Score == 3)
             {
-                SceneManager.LoadScene("Lose");
+                win2p.Result2();
             }
 
         }

@@ -25,6 +25,9 @@ public class Mag : MonoBehaviour
     [SerializeField]
     Image player2cooldown;
 
+    [SerializeField]
+    private GunSE se;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +55,7 @@ public class Mag : MonoBehaviour
 
         if (Input.GetButtonDown("Relo1")) 
         {
+            se.ReLoad();
             player1cooldown.fillAmount = 0.0f;
             zeroammo1 = true;
             nowP1mag = 0;

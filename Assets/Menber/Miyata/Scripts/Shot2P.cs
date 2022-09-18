@@ -27,6 +27,8 @@ public class Shot2P : MonoBehaviour
     [SerializeField]
     Explosion exp;
 
+    public GunSE se;
+
     // Update is called once per frame
     void Update()
     {
@@ -73,6 +75,7 @@ public class Shot2P : MonoBehaviour
             // 弾の発射方向にnewBallのz方向(ローカル座標)を入れ、弾オブジェクトのrigidbodyに衝撃力を加える
             newBall.GetComponent<Rigidbody>().AddForce(direction * speed, ForceMode.Impulse);
             mag.reloadMag(1);
+            se.Shot(Icon2P.selectCharaNumber2);
             // 出現させたボールを0.2秒後に消す
             Destroy(newBall, 0.2f);
 
