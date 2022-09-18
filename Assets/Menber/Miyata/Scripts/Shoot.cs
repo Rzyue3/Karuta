@@ -14,13 +14,8 @@ public class Shoot : MonoBehaviour
     private float speed = 300f;
 
     [SerializeField]
-    private float Firerate;
-
-    [SerializeField]
     private float rp;
     private float time;
-
-    private bool speedtype;
 
     [SerializeField]
     Mag mag;
@@ -28,40 +23,24 @@ public class Shoot : MonoBehaviour
     Explosion exp;
 
     public GunSE se;
-    public AudioClip audioClip;
-    AudioSource audioSource;
-
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-
-        if(speedtype)
+        time = Time.deltaTime;
+        if(Input.GetButton("Fire3") && Test.selectCharaNumber1 == 1)
         {
-            Debug.Log("フルオート");
-            if(time>=Firerate)
+            if(time>=0.2)
             {
-                
                 time = 0.0f;
                 LauncherShot();
             }
-
-        }
-
-        if(Input.GetButtonDown("Fire3") && Test.selectCharaNumber1 == 1)
-        {
-            speedtype = true;
         }
         else if(Input.GetButtonDown("Fire3"))
         {
             LauncherShot();
         }
 
-        if(Input.GetButtonUp("Fire3"))
-        {
-            speedtype = false;
-        }
-
+        
         /*
         if(Input.GetMouseButtonDown(0))
         {
@@ -90,8 +69,8 @@ public class Shoot : MonoBehaviour
             newBall.GetComponent<Rigidbody>().AddForce(direction * speed, ForceMode.Impulse);
             // 出現させたボールの名前を"bullet"に変更
             newBall.name = bullet.name;
-           // se.SettingPlaySE();
             mag.reloadMag(0);
+            se.Shot(Test.selectCharaNumber1);
             Destroy(newBall, 0.2f);
 
         }
