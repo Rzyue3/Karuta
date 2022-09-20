@@ -27,7 +27,8 @@ public class Shoot : MonoBehaviour
     [SerializeField]
     Explosion exp;
 
-    public GunSE se;
+    [SerializeField]
+    private GunSE se;
     public AudioClip audioClip;
     AudioSource audioSource;
 
@@ -44,7 +45,6 @@ public class Shoot : MonoBehaviour
             Debug.Log("フルオート");
             if(time>=Firerate)
             {
-                
                 time = 0.0f;
                 LauncherShot();
             }
@@ -84,8 +84,10 @@ public class Shoot : MonoBehaviour
     }
     private void LauncherShot()
     {
+        Debug.Log(mag.zeroammo1);
         if(!mag.zeroammo1)
         {
+            se.Shot(Test.selectCharaNumber1);
             exp.blowoff(0);
             // 弾を発射する場所を取得
             Vector3 bulletPosition = firingPoint.transform.position;

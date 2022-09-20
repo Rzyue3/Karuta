@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreP2 : MonoBehaviour
 {
     [SerializeField]
-    private GameObject p1_obj = null; //textオブジェクト
+    private GameObject p1_obj; //textオブジェクト
     [SerializeField]
     private GameMaster master; //p1Scoreをもってくる
     // Start is called before the first frame update

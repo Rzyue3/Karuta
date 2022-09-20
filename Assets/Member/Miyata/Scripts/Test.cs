@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Test : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class Test : MonoBehaviour
     public SE se;
     public AudioClip audioClip;
     AudioSource audioSource;
+
+    void Start()
+    {
+        selectCharaNumber1 = 0;
+    }
 
     public void OnTriggerStay(Collider other)
     {
@@ -68,7 +74,5 @@ public class Test : MonoBehaviour
         }
 
     }
-
-
 
 }

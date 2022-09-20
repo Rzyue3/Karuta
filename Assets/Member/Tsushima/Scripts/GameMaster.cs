@@ -38,17 +38,19 @@ public class GameMaster : MonoBehaviour
     [SerializeField]
     private float textspeed;
 
-    public int tetetest;
-    public bool testbool;
+    [SerializeField]
+    private GameObject P1Crosshair;
+    [SerializeField]
+    private GameObject P2Crosshair;
 
     // カルタの破壊された数
     [SerializeField]
     public int DestroyCount;
     
     [SerializeField]
-    private int P1Score;
+    public int P1Score;
     [SerializeField]
-    private int P2Score;
+    public int P2Score;
     [SerializeField]
     private List<GameObject> scoreobj;
     private float initTime;
@@ -60,6 +62,13 @@ public class GameMaster : MonoBehaviour
     Shoot shot1p;
     [SerializeField]
     Shot2P shot2p;
+    [SerializeField]
+    Win1P win1p;
+    [SerializeField]
+    Win2P win2p;
+
+    public bool initendflag;
+    
 
     public bool karutainitpos;
 
@@ -75,7 +84,6 @@ public class GameMaster : MonoBehaviour
         roundstart = gamemanager.GetComponent<RoundStart>();
         audioSource = GetComponent<AudioSource>();
         audiorand = Random.Range(0,2);
-        testbool = false;
         textStop = false;
         audiostart = false;
         StartCoroutine(shuffle.shufflekarutaAnim());
@@ -83,6 +91,7 @@ public class GameMaster : MonoBehaviour
         nextkarutapik.randompick();
         TimeSet();
         KarutaSystem();
+        initendflag = true;
     }
 
     void Update()
@@ -156,7 +165,8 @@ public class GameMaster : MonoBehaviour
 
     public void gameSetco(int i, GameObject obj)
     {
-        karutainitpos = true;
+        P1Crosshair.SetActive(false);
+        P2Crosshair.SetActive(false);
         shot1p.mag.initmag();
         shot2p.mag.initmag();
         shot1p.speedtype = false;
@@ -181,7 +191,8 @@ public class GameMaster : MonoBehaviour
             Debug.Log("Player1Score:" + P1Score);
             if(P1Score == 3)
             {
-                SceneManager.LoadScene("Win");
+                StartCoroutine(win1p.Result());
+                return;
             }
         }
         else
@@ -195,11 +206,12 @@ public class GameMaster : MonoBehaviour
             }
             if(P2Score == 3)
             {
-                SceneManager.LoadScene("Lose");
+                StartCoroutine(win2p.Result2());
+                return;
             }
 
         }
-
+        karutainitpos = true;
 
         audiorand = Random.Range(0,2);
         nextkarutapik.randompick();

@@ -8677,6 +8677,7 @@ MonoBehaviour:
   Firerate: 0
   rp: 0
   speedtype: 0
+  se: {fileID: 0}
   mag: {fileID: 0}
   exp: {fileID: 0}
 --- !u!1 &3264220547717581847

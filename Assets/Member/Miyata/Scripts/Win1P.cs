@@ -19,8 +19,9 @@ public class Win1P : MonoBehaviour
 
     }
 
-    public void Result()
+    public IEnumerator Result()
     {
+        yield return new WaitForSeconds(13f);
         back.SetActive(true);
         obj.SetActive(true);
         shot1p.GetComponent<Shoot>().enabled = false;

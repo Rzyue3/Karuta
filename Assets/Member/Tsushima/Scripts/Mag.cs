@@ -17,19 +17,25 @@ public class Mag : MonoBehaviour
     private float _count1;
     private float _count2;
 
+    private bool Reloflag1;
+    private bool Reloflag2;
 
     [SerializeField]
-    CsvDataLoad csvdataload;
+    private CsvDataLoad csvdataload;
     [SerializeField]
-    Image player1cooldown;
+    private Image player1cooldown;
     [SerializeField]
-    Image player2cooldown;
+    private Image player2cooldown;
     [SerializeField]
-    GameMaster gamemaster;
+    private GunSE gunse;
+    [SerializeField]
+    private GameMaster gamemaster;
 
     // Start is called before the first frame update
     void Start()
     {
+        Reloflag1 = false;
+        Reloflag2 = false;
         player1Mag = csvdataload.WeaponBullets[Test.selectCharaNumber1];
         player2Mag = csvdataload.WeaponBullets[Icon2P.selectCharaNumber2];
         player1ReTime = csvdataload.WeaponReloadTime[Test.selectCharaNumber1];
@@ -37,6 +43,7 @@ public class Mag : MonoBehaviour
 
         nowP1mag = player1Mag;
         nowP2mag = player2Mag;
+
     }
 
     // Update is called once per frame
@@ -44,24 +51,34 @@ public class Mag : MonoBehaviour
     {
         if(nowP1mag == 0)
         {
+            zeroammo1 = true;
             reloadnow(0);
 //            Debug.Log ("経過時間(秒)" + Time.time);
         }
 
         if(nowP2mag == 0)
+        {
+            zeroammo2 = true;
             reloadnow(1);
-        //player1cooldown.fillAmount -= Time.deltaTime;
+        }
 
         if (Input.GetButtonDown("Relo1")) 
         {
-            player1cooldown.fillAmount = 0.0f;
+            if(_count1 == 0.0f)
+            {
+                Reloflag1 = true;
+                player1cooldown.fillAmount = 0.0f;
+            }
             zeroammo1 = true;
             nowP1mag = 0;
         }
         if (Input.GetButtonDown("Relo2")) 
         {
-            player2cooldown.fillAmount = 0.0f;
-
+            if(_count2 == 0.0f)
+            {
+                Reloflag2 = true;
+                player2cooldown.fillAmount = 0.0f;
+            }
             zeroammo2 = true;
             nowP2mag = 0;
         }
@@ -74,21 +91,21 @@ public class Mag : MonoBehaviour
         {
             if(nowP1mag != 0)
             {
+                Reloflag1 = true;
                 nowP1mag--;
                 player1cooldown.fillAmount -= 1.0f / player1Mag;
             }
-            else
-                zeroammo1 = true;
+
         }
         else
         {
             if(nowP2mag != 0)
             {
+                Reloflag2 = true;
                 nowP2mag--;
                 player2cooldown.fillAmount -= 1.0f / player2Mag;
             }
-            else
-                zeroammo2 = true;
+
         }
     }
 
@@ -96,6 +113,12 @@ public class Mag : MonoBehaviour
     {
         if(i == 0)
         {
+            if(Reloflag1 && gamemaster.initendflag)
+            {
+                Reloflag1 = false;
+                zeroammo1 = true;
+                gunse.ReLoad();
+            }
             _count1 += Time.deltaTime;
             player1cooldown.fillAmount = _count1 / player1ReTime;
             if(player1cooldown.fillAmount >= 1)
@@ -104,11 +127,16 @@ public class Mag : MonoBehaviour
                 nowP1mag = player1Mag;
                 _count1 = 0.0f;
 //                Debug.Log ("経過時間(秒)" + Time.time);
-
             }
         }
         else
         {
+            if(Reloflag2 && gamemaster.initendflag)
+            {
+                Reloflag2 = false;
+                zeroammo2 = true;
+                gunse.ReLoad();
+            }
             _count2 += Time.deltaTime;
             player2cooldown.fillAmount = _count2 / player2ReTime;
             if(player2cooldown.fillAmount >= 1)

@@ -18,8 +18,9 @@ public class Win2P : MonoBehaviour
     {
     }
 
-    public void Result2()
+    public IEnumerator Result2()
     {
+        yield return new WaitForSeconds(13f);
         back.SetActive(true);
         obj.SetActive(true);
         shot1p.GetComponent<Shoot>().enabled = false;

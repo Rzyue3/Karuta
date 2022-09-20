@@ -27,6 +27,11 @@ public class Icon2P : MonoBehaviour
     public AudioClip audioClip;
     AudioSource audioSource;
 
+    void Start()
+    {
+        selectCharaNumber2 = 0;
+    }
+
     public void OnTriggerStay(Collider other)
     {
         if(other.gameObject == Speedobj)

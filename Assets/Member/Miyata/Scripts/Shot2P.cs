@@ -23,6 +23,9 @@ public class Shot2P : MonoBehaviour
     public bool speedtype;
 
     [SerializeField]
+    private GunSE se;
+
+    [SerializeField]
     public Mag mag;
     [SerializeField]
     Explosion exp;
@@ -37,14 +40,13 @@ public class Shot2P : MonoBehaviour
             Debug.Log("フルオート");
             if(time>=Firerate)
             {
-                
                 time = 0.0f;
                 LauncherShot2P();
             }
 
         }
 
-        if(Input.GetButtonDown("Fire3_2") && Test.selectCharaNumber1 == 1)
+        if(Input.GetButtonDown("Fire3_2") && Icon2P.selectCharaNumber2 == 1)
         {
             speedtype = true;
         }
@@ -69,6 +71,7 @@ public class Shot2P : MonoBehaviour
     {
         if(!mag.zeroammo2)
         {
+            se.Shot(Icon2P.selectCharaNumber2);
             exp.blowoff(1);
             // 弾を発射する場所を取得
             Vector3 bulletPosition = firingPoint.transform.position;
