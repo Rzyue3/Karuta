@@ -16,6 +16,7 @@ TagManager:
   - Titletag
   - Resulttag
   - resulttag
+  - Rematch
   layers:
   - Default
   - TransparentFX

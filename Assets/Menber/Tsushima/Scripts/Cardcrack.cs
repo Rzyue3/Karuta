@@ -31,6 +31,5 @@ public class Cardcrack : MonoBehaviour
         Debug.Log(hit.CardHP);
         Debug.Log(0.0067f * (150 - hit.CardHP));
         crack.fillAmount += 0.0067f * (150 - hit.CardHP);
-
     }
 }

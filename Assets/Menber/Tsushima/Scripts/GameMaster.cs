@@ -57,7 +57,8 @@ public class GameMaster : MonoBehaviour
     private Win1P win1p;
     [SerializeField]
     private Win2P win2p;
-
+    [SerializeField]
+    private GameMaster gm;
 
     void Start()
     {
@@ -201,6 +202,7 @@ public class GameMaster : MonoBehaviour
             if(P1Score == 3)
             {
                 win1p.Result();
+                return;
             }
         }
         else
@@ -215,6 +217,7 @@ public class GameMaster : MonoBehaviour
             if(P2Score == 3)
             {
                 win2p.Result2();
+                return;
             }
 
         }

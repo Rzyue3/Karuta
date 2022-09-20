@@ -27,7 +27,7 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         time = Time.deltaTime;
-        if(Input.GetButton("Fire3") && Test.selectCharaNumber1 == 1)
+        if(Input.GetButtonDown("Fire3") && Test.selectCharaNumber1 == 1)
         {
             if(time>=0.2)
             {
