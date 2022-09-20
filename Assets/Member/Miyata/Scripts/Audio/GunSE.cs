@@ -4,16 +4,49 @@ using UnityEngine;
 
 public class GunSE : MonoBehaviour
 {
-    private  AudioSource audioSourceSE;
-    public  AudioClip se;
+    [SerializeField]
+    private AudioSource  a;
+    [SerializeField]
+    private AudioClip balance;
+    [SerializeField]
+    private AudioClip speed;
+    [SerializeField]
+    private AudioClip power;
+    [SerializeField]
+    private AudioClip miss;
+    [SerializeField]
+    private AudioClip reload;
  
-    private void Start()
+    
+    public void Shot(int i)
     {
-        audioSourceSE = gameObject.GetComponent<AudioSource>();
+        if(i == 1)
+        {
+            a.PlayOneShot(speed);
+        }
+        else if(i == 2)
+        {
+            a.PlayOneShot(balance);
+        }
+        else
+        {
+            a.PlayOneShot(power);
+        }
     }
- 
-    public  void SettingPlaySE()
+
+    public void Miss()
     {
-        audioSourceSE.PlayOneShot(se);
+        a.PlayOneShot(miss);
     }
+
+    public void ReLoad()
+    {
+        a.PlayOneShot(reload);
+    }
+
+    public void Speed()
+    {
+
+    }
+    
 }

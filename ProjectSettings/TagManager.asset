@@ -16,8 +16,7 @@ TagManager:
   - Titletag
   - Resulttag
   - resulttag
-  - Bullet1
-  - Bullet2
+  - Rematch
   layers:
   - Default
   - TransparentFX

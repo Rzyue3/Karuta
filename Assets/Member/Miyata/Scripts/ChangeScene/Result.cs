@@ -4,15 +4,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Result : MonoBehaviour
-//リザルト画面からタイトルへの遷移スクリプト
+//リザルト画面から武器選択画面への遷移スクリプト
 {
-    private string Resulttag = "resulttag";
 
-    public void OnTriggerEnter(Collider other)
+    private string PlayerTag="Player1";
+    private string PlayerTag2="Player2";
+
+    public void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag==Resulttag)
+        Debug.Log("判定");
+        if(other.gameObject.tag == PlayerTag && Input.GetButton("Fire3"))
         {
-            SceneManager.LoadScene("Title");
+            SceneManager.LoadScene("WeaponsScene");
+        }
+        if(other.gameObject.tag == PlayerTag2 && Input.GetButton("Fire3_2"))
+        {
+            SceneManager.LoadScene("WeaponsScene");
         }
     }
 }
