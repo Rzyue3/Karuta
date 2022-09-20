@@ -7,7 +7,7 @@ using System.Linq;
 
 // 参考:https://qiita.com/lycoris102/items/5ea0134c6526cf8afafe
 
-[RequireComponent(typeof(Text))]
+//[RequireComponent(typeof(Text))]
 public class RotateText : UIBehaviour, IMeshModifier
 {
     private Text textComponent;
@@ -17,7 +17,7 @@ public class RotateText : UIBehaviour, IMeshModifier
     // XXX 別の設定ファイルなりcsvにまとめて最初に読み込んでしまうのが良さそう
     public List<char> nonrotatableCharacters;
 
-    public new void OnValidate()
+    public void OnValidate()
     {
         base.OnValidate();
         textComponent = this.GetComponent<Text>();
