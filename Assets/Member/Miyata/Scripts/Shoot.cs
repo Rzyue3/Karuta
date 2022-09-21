@@ -69,12 +69,12 @@ public class Shoot : MonoBehaviour
         {
             speedtype = false;
         }
-        /*
+        
         if(Input.GetMouseButtonDown(0))
         {
-            exp.blowoff();
+            LauncherShot();
         }
-        */
+        
         if(Input.GetMouseButton(0) && Test.selectCharaNumber1 == 1 && time>=0.2)
         {
             LauncherShot();

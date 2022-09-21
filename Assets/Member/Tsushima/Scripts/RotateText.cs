@@ -17,18 +17,10 @@ public class RotateText : UIBehaviour, IMeshModifier
     // XXX 別の設定ファイルなりcsvにまとめて最初に読み込んでしまうのが良さそう
     public List<char> nonrotatableCharacters;
 
-
-    public void OnValidate()
+    void Start()
     {
         textComponent = this.GetComponent<Text>();
-
-        var graphics = base.GetComponent<Graphic>();
-        if (graphics != null)
-        {
-            graphics.SetVerticesDirty();
-        }
     }
-
 
     public void ModifyMesh (Mesh mesh) {}
     public void ModifyMesh (VertexHelper verts)
