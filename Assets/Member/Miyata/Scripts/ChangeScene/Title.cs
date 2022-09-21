@@ -51,6 +51,5 @@ public class Title : MonoBehaviour
         RightAnim.SetBool("CutAnim",false);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("WeponsScene");
-
     }
 }

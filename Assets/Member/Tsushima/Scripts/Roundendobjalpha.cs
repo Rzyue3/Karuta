@@ -30,6 +30,7 @@ public class Roundendobjalpha : MonoBehaviour
 
     public void set()
     {
+        Debug.Log("獲得表示");
         flag = false;
         Fill.fillAmount = 1.0f;
         StartCoroutine(setflag(setnum));

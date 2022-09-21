@@ -58,6 +58,10 @@ public class RoundendobjAc : MonoBehaviour
                 alpobj.Fill.fillAmount = 1.0f;
                 alpobj.flag = false;
             }
+            var alpobj2 = alphaobj[5].GetComponent<Roundendobjalpha>();
+            alpobj2.Fill.fillAmount = 1.0f;
+            alpobj2.flag = false;
+
             endobj[8].SetActive(false);
             obj.SetActive(false);
 
@@ -102,14 +106,19 @@ public class RoundendobjAc : MonoBehaviour
             for(int z = 4; z < 8;z++)
             {
                 endobj[z].SetActive(false);
-                var alpobj = alphaobj[z].GetComponent<Roundendobjalpha>();
+            }
+            for(int g = 0; g < 4;g++)
+            {
+                var alpobj = alphaobj[g].GetComponent<Roundendobjalpha>();
                 alpobj.Fill.fillAmount = 1.0f;
                 alpobj.flag = false;
             }
+            var alpobj2 = alphaobj[5].GetComponent<Roundendobjalpha>();
+            alpobj2.Fill.fillAmount = 1.0f;
+            alpobj2.flag = false;
+
             endobj[8].SetActive(false);
             obj.SetActive(false);
-
-
         }
     }
 
