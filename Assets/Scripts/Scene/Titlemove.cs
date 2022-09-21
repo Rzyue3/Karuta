@@ -10,6 +10,11 @@ public class Titlemove : MonoBehaviour
     private Animator LeftAnim;
     [SerializeField]
     private Animator RightAnim;
+    [SerializeField]
+    private GameObject obj;
+    private string str;
+
+    public bool scenemoveflag;
 
     // Start is called before the first frame update
     void Start()
@@ -22,17 +27,34 @@ public class Titlemove : MonoBehaviour
     {
         if (Input.GetKey (KeyCode.A)) 
         {
+            str = SceneManager.GetActiveScene().name;
+            Debug.Log("**ComandA");
             StartCoroutine("cutinanim");
+
         }
     }
 
     private IEnumerator cutinanim()
     {
+        Debug.Log("**Command2");
         LeftAnim.SetTrigger("1time");
         RightAnim.SetTrigger("1time");
         yield return new WaitForSeconds(2);
+        SceneManager.sceneLoaded += SceneLoaded;
+
         SceneManager.LoadScene("Title");
+    }
+
+    void SceneLoaded(Scene next, LoadSceneMode mode)
+    {
+        var str = SceneManager.GetActiveScene().name;
+        if(str == "Title")
+        {
+            Destroy(obj);
+        }
 
     }
+
+
 
 }
